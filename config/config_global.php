@@ -32,7 +32,7 @@
 		define('_SSL_','http');
 	}
 	define('_SERVER_NAME',$_SERVER['HTTP_HOST']);
-	define('_SERVER_PATH','/tuyetshop.net');
+	define('_SERVER_PATH','/'.$WEBCONFIG['WEBSITENAME']);
 	define('_ROOT_PATH',_SSL._SERVER_NAME);
 	define('_ROOT_PATH_WEBSITE',_SSL._SERVER_NAME._SERVER_PATH);
 	define('_ROOT_PATH_WEBSITE_F',_ROOT_PATH_WEBSITE."/");

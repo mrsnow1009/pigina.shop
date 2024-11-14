@@ -5,6 +5,7 @@
     $webmt_level = $Session->get("webmt_level");
 
 	$_method = new method();
+	$db = new database();
 
 	/* get request in link */
 	$lang = $_method->_Get('lang','string');

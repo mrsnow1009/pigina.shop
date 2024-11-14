@@ -5,8 +5,8 @@
     $DOMAIN_ACCOUNT  =  $_SERVER['HTTP_HOST'];
 
     $web_Config = array(
-        'WebsiteName' => 'tuyetshop',
-        'DomainName' => 'tuyetshop',
+        'WebsiteName' => 'pigina.shop',
+        'DomainName' => 'pigina',
         'lang' => array('default' => 'vn','list' => array('en','vn')),
         'rewrite' => '1',
         'currency' => 'VND',
@@ -18,7 +18,7 @@
     $WEBCONFIG =array();
     $WEBCONFIG['DB'] = array(
         'hosting' => 'localhost',
-        'name_db' => 'db_tuyetshop',
+        'name_db' => 'db_pigina',
         'user_db' => 'root',
         'pass_db' => '',
         'port_db' => '');
