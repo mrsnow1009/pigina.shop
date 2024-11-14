@@ -454,6 +454,7 @@
 	$LANG['url_button'] = 'URL button';
 	$LANG['background_image'] = 'Hình nền';
 	$LANG['sort'] = 'Sắp xếp';
+	$LANG['new_order'] = 'Đơn hàng mới';
 
 	$LANG['aaaaaaa'] = 'aaaaaaa';
 	$LANG['aaaaaaa'] = 'aaaaaaa';
