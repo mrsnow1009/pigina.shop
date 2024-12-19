@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Tuyetshop</title>
+	<title>Pigina</title>
 
 	<?php include 'layouts/head.php'; ?>
 
@@ -10,168 +10,199 @@
 
 	<?php include 'layouts/header.php'; ?>
 
-	<section class="header-banner">
+	<section class="section-padding pt-3 pb-3">
 		<div class="container">
-			<div class="row">
-				<div class="col-lg-6 col-12">
-					<div class="h-100 d-flex align-items-center banner-left">
-                        <div class="b-left pe-xl-5">
-                            <div id="carousel-banner-text" class="carousel slide slide-banner" data-bs-ride="false">
-                                <div class="carousel-inner">
-                                    <div class="carousel-item active">
-                                        <div class="text-trig active" data-slide="0">
-                                            <div class="bt-slogan mb-4">Khám phá Sipos ngay hôm nay!</div>
-                                            <div class="bt-title mb-4">Quản lý dễ dàng, bán hàng nhanh chóng</div>
-                                            <div class="bt-intro mb-4">Với Sipos, việc quản lý bán hàng trở nên đơn giản hơn bao giờ hết. Từ việc theo dõi tồn kho, quản lý đơn hàng đến phân tích doanh thu, mọi thứ đều được tự động hóa và tối ưu hóa. Khám phá Sipos ngay hôm nay để nâng cao hiệu suất và tăng trưởng cửa hàng và doanh nghiệp của bạn một cách nhanh chóng.</div>
-                                            <div class="bt-btn"><a href="javascript::" class="btn btn-theme" title="Dùng thử ngay">Dùng thử ngay <i class="fa-sharp fa-regular fa-arrow-right ms-1"></i></a></div>
-                                        </div>
-                                    </div>
-                                    <div class="carousel-item">
-                                        <div class="text-trig" data-slide="1">
-                                            <div class="bt-slogan mb-4">Giải pháp quản lý bán hàng tối ưu</div>
-                                            <div class="bt-title mb-4">Nâng cao hiệu quả kinh doanh với Sipos</div>
-                                            <div class="bt-intro mb-4">Tích hợp các tính năng thông minh giúp theo dõi khách hàng, quản lý đơn hàng và tối ưu hóa quy trình bán hàng. Sipos giúp bạn tiết kiệm thời gian và nâng cao trải nghiệm khách hàng một cách hiệu quả nhất.</div>
-                                            <div class="bt-btn"><a href="javascript::" class="btn btn-theme" title="Dùng thử ngay">Dùng thử ngay <i class="fa-sharp fa-regular fa-arrow-right ms-1"></i></a></div>
-                                        </div>
-                                    </div>
-                                    <div class="carousel-item">
-                                        <div class="text-trig" data-slide="2">
-                                            <div class="bt-title mb-4">Giải pháp quản lý toàn diện cho mô hình F&B và cửa hàng bán lẻ.</div>
-                                            <div class="bt-intro mb-4">Sipos tích hợp đầy đủ các tính năng từ quản lý tồn kho, theo dõi doanh thu đến quản lý nhân viên, giúp tối ưu hóa hoạt động kinh doanh. Đơn giản hóa quy trình và tăng cường hiệu quả ngay hôm nay với Sipos.</div>
-                                            <div class="bt-btn"><a href="javascript::" class="btn btn-theme" title="Dùng thử ngay">Dùng thử ngay <i class="fa-sharp fa-regular fa-arrow-right ms-1"></i></a></div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+			<div id="bannerHomepage" class="carousel slide">
+				<div class="carousel-inner">
+					<div class="carousel-item active">
+						<a href="javascript:;" title="">
+							<img src="images/banner/banner-1.png" class="d-block w-100" alt="">
+						</a>
+					</div>
+					<div class="carousel-item">
+						<a href="javascript:;" title="">
+							<img src="images/banner/banner-2.png" class="d-block w-100" alt="">
+						</a>
+					</div>
+					<div class="carousel-item">
+						<a href="javascript:;" title="">
+							<img src="images/banner/banner-3.png" class="d-block w-100" alt="">
+						</a>
+					</div>
+					<div class="carousel-item">
+						<a href="javascript:;" title="">
+							<img src="images/banner/banner-4.png" class="d-block w-100" alt="">
+						</a>
+					</div>
+					<div class="carousel-item">
+						<a href="javascript:;" title="">
+							<img src="images/banner/banner-5.png" class="d-block w-100" alt="">
+						</a>
+					</div>
+					<div class="carousel-item">
+						<a href="javascript:;" title="">
+							<img src="images/banner/banner-6.png" class="d-block w-100" alt="">
+						</a>
+					</div>
+					<div class="carousel-item">
+						<a href="javascript:;" title="">
+							<img src="images/banner/banner-7.png" class="d-block w-100" alt="">
+						</a>
+					</div>
 				</div>
-				<div class="col-lg-6 col-12">
-					<div class="h-100 w-100 d-flex align-items-center banner-right">
-                        <div class="b-right w-100">
-                            <div id="carousel-banner" class="carousel slide slide-banner" data-bs-ride="carousel">
-                                <div class="carousel-indicators">
-                                    <button type="button" data-bs-target="#carousel-banner" data-bs-slide-to="0" class="active" aria-current="true" aria-label=""></button>
-                                    <button type="button" data-bs-target="#carousel-banner" data-bs-slide-to="1" aria-label=""></button>
-                                    <button type="button" data-bs-target="#carousel-banner" data-bs-slide-to="2" aria-label=""></button>
-                                </div>
-                                <div class="carousel-inner">
-                                    <div class="carousel-item active">
-                                        <img src="images/banner/banner-1.jpg" class="d-block w-100" alt="" loading="lazy">
-                                    </div>
-                                    <div class="carousel-item">
-                                        <img src="images/banner/banner-2.jpg" class="d-block w-100" alt="" loading="lazy">
-                                    </div>
-                                    <div class="carousel-item">
-                                        <img src="images/banner/banner-3.jpg" class="d-block w-100" alt="" loading="lazy">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+				<button class="carousel-control-prev" type="button" data-bs-target="#bannerHomepage" data-bs-slide="prev">
+					<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+					<span class="visually-hidden">Previous</span>
+				</button>
+				<button class="carousel-control-next" type="button" data-bs-target="#bannerHomepage" data-bs-slide="next">
+					<span class="carousel-control-next-icon" aria-hidden="true"></span>
+					<span class="visually-hidden">Next</span>
+				</button>
+			</div>
+		</div>
+	</section>
+
+	<section class="section-product pt-5 pb-5">
+		<div class="container">
+			<div class="row row-style">
+				<div class="col-xl-4 col-md-6 col-12">
+					<div class="card-product">
+						<div class="img mb-3">
+							<a href="san-pham-chi-tiet.php" title="">
+								<img src="images/product/vien-dat-se-khit-tai-tao-te-bao.jpg" alt="" loading="lazy" />
+							</a>
+						</div>
+						<div class="info">
+							<h2 class="title text-center text-md-start">
+								<a class="gradient-text" href="san-pham-chi-tiet.php" title="">Set 18 viên đặt se khít - tái tạo tế bào 3</a>
+							</h2>
+							<div class="price mt-2 text-center text-md-start">200.000 VNĐ <span class="text-decoration-line-through ms-3">400.000VNĐ</span></div>
+							<div class="intro mt-2">Đảm bảo sức khỏe và sắc đẹp vùng kín của bạn thông qua&nbsp;bộ 3 công nghệ tái tạo tế bào hàng đầu 3-GF: EGF, IGF, FGF, COLLAGEN THỦY PHÂN và chiết xuất từ 10 loại thảo dược thiên nhiên quý hiếm.</div>
+							<div class="button mt-3 text-center text-md-start">
+								<a href="addToCart(1);" title="" class="btn btn-theme"><i class="fa-sharp fa-regular fa-basket-shopping-simple me-2"></i> Thêm vào giỏ hàng</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-xl-4 col-md-6 col-12">
+					<div class="card-product">
+						<div class="img mb-3">
+							<a href="san-pham-chi-tiet.php" title="">
+								<img src="images/product/dung-dich-ve-sinh-tao-tao-te-bao.png" alt="" loading="lazy" />
+							</a>
+						</div>
+						<div class="info">
+							<h2 class="title text-center text-md-start">
+								<a class="gradient-text" href="san-pham-chi-tiet.php" title="">Dung dịch vệ sinh tái tạo tế bào</a>
+							</h2>
+							<div class="price mt-2 text-center text-md-start">200.000 VNĐ <span class="text-decoration-line-through ms-3">400.000VNĐ</span></div>
+							<div class="intro mt-2">Thông qua bộ 3 công nghệ tái tạọ tế bào hàng đầu 3-GF: EGF, IGF, FGF, Acid Lactic và chiết xuất từ thảo dược thiên nhiên phù hợp chăm sóc hiệu quả, an toàn cho khu vực nữ tính nhất trên cơ thể bạn.</div>
+							<div class="button mt-3 text-center text-md-start">
+								<a href="addToCart(2);" title="" class="btn btn-theme"><i class="fa-sharp fa-regular fa-basket-shopping-simple me-2"></i> Thêm vào giỏ hàng</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-xl-4 col-md-6 col-12">
+					<div class="card-product">
+						<div class="img mb-3">
+							<a href="san-pham-chi-tiet.php" title="">
+								<img src="images/product/vien-uong-bo-sung-noi-tiet-nu-ostara.png" alt="" loading="lazy" />
+							</a>
+						</div>
+						<div class="info">
+							<h2 class="title text-center text-md-start">
+								<a class="gradient-text" href="san-pham-chi-tiet.php" title="">VIÊN UỐNG BỔ SUNG NỘI TIẾT NỮ OSTARA</a>
+							</h2>
+							<div class="price mt-2 text-center text-md-start">200.000 VNĐ <span class="text-decoration-line-through ms-3">400.000VNĐ</span></div>
+							<div class="intro mt-2">Ostara Spring giúp tăng tối đa Estrogen nội sinh, tăng cường sinh lý nữ, giảm khô hạn, điều hoà kinh nguyệt. Sản phẩm được bào chế từ 100% tinh chất thiên nhiên, an toàn với người sử dụng, tác dụng từ gốc, hiệu quả bền lâu.</div>
+							<div class="button mt-3 text-center text-md-start">
+								<a href="addToCart(2);" title="" class="btn btn-theme"><i class="fa-sharp fa-regular fa-basket-shopping-simple me-2"></i> Thêm vào giỏ hàng</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-xl-4 col-md-6 col-12">
+					<div class="card-product">
+						<div class="img mb-3">
+							<a href="san-pham-chi-tiet.php" title="">
+								<img src="images/product/dung-dich-ve-sinh-dang-goi.jpg" alt="" loading="lazy" />
+							</a>
+						</div>
+						<div class="info">
+							<h2 class="title text-center text-md-start">
+								<a class="gradient-text" href="san-pham-chi-tiet.php" title="">DUNG DỊCH VỆ SINH TÁI TẠO TẾ BÀO, DẠNG GÓI TIỆN LỢI</a>
+							</h2>
+							<div class="price mt-2 text-center text-md-start">200.000 VNĐ <span class="text-decoration-line-through ms-3">400.000VNĐ</span></div>
+							<div class="intro mt-2">Thông qua bộ 3 công nghệ tái tạọ tế bào hàng đầu 3-GF: EGF, IGF, FGF, Acid Lactic và chiết xuất từ thảo dược thiên nhiên phù hợp chăm sóc hiệu quả, an toàn cho khu vực nữ tính nhất trên cơ thể bạn.</div>
+							<div class="button mt-3 text-center text-md-start">
+								<a href="addToCart(2);" title="" class="btn btn-theme"><i class="fa-sharp fa-regular fa-basket-shopping-simple me-2"></i> Thêm vào giỏ hàng</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-xl-4 col-md-6 col-12">
+					<div class="card-product">
+						<div class="img mb-3">
+							<a href="san-pham-chi-tiet.php" title="">
+								<img src="images/product/gel-massage-da-cong-dung-pigina.jpg" alt="" loading="lazy" />
+							</a>
+						</div>
+						<div class="info">
+							<h2 class="title text-center text-md-start">
+								<a class="gradient-text" href="san-pham-chi-tiet.php" title="">GEL MASSAGE ĐA CÔNG DỤNG PIGINA</a>
+							</h2>
+							<div class="price mt-2 text-center text-md-start">200.000 VNĐ <span class="text-decoration-line-through ms-3">400.000VNĐ</span></div>
+							<div class="intro mt-2">Thông qua bộ 3 công nghệ tái tạọ tế bào hàng đầu 3-GF: EGF, IGF, FGF, Phyto-Estrogen, Citric Acid, Keo Ong và chiết xuất từ thảo dược thiên nhiên chăm sóc hiệu quả, an toàn cho khu vực chữ Y nhạy cảm.</div>
+							<div class="button mt-3 text-center text-md-start">
+								<a href="addToCart(2);" title="" class="btn btn-theme"><i class="fa-sharp fa-regular fa-basket-shopping-simple me-2"></i> Thêm vào giỏ hàng</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-xl-4 col-md-6 col-12">
+					<div class="card-product">
+						<div class="img mb-3">
+							<a href="san-pham-chi-tiet.php" title="">
+								<img src="images/product/pigina-intimate-probiotics-for-women.png" alt="" loading="lazy" />
+							</a>
+						</div>
+						<div class="info">
+							<h2 class="title text-center text-md-start">
+								<a class="gradient-text" href="san-pham-chi-tiet.php" title="">Thực phẩm bảo vệ sức khoẻ – Viên uống bổ sung lợi khuẩn cho nữ Pigina</a>
+							</h2>
+							<div class="price mt-2 text-center text-md-start">200.000 VNĐ <span class="text-decoration-line-through ms-3">400.000VNĐ</span></div>
+							<div class="intro mt-2">Công nghệ bao bù cản nhiệt – hút ẩm dành riêng cho lợi khuẩn, nhập khẩu Hoa Kỳ/Active-Polumer Technology.</div>
+							<div class="button mt-3 text-center text-md-start">
+								<a href="addToCart(2);" title="" class="btn btn-theme"><i class="fa-sharp fa-regular fa-basket-shopping-simple me-2"></i> Thêm vào giỏ hàng</a>
+							</div>
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>
 	</section>
 
-    <section class="section-padding">
-    	<div class="container">
-    		<div class="section-block mb-3 mb-lg-4">
-    			<h2 class="title-section">Sản phẩm khuyến mãi</h2>
-    			<!-- <a href="san-pham.php" title="" class="section-viewall">Xem tất cả <i class="fa-sharp fa-regular fa-arrow-right-long ms-1"></i></a> -->
-    		</div>
-			<div class="product-slider">
-				<div class="row">
-					<div class="col-xl-4 col-lg-3 col-sm-2 col-12">
-						<div class="product-card">
-							<a href="product-detail.php" class="position-relative" title="" target="">
-								<img src="images/product/Rectangle582.webp" alt="" loading="lazy" />
-							</a>
-							<div class="new">New</div>
-							<div class="off">-33%</div>
-							<h2 class="title">
-								<a href="product-detail.php" title="" target="">Silver Dangling Triple Leaf Charm Anklet</a>
-							</h2>
-							<div class="price">199.000 đ <s class="old ms-2">299.000 đ</s></div>
-							<div class="product-card-btn">
-								<a id="addToCart" href="javascript:;" title="" class="btn btn-primary btn-theme w-100 text-center"><i class="fa-sharp fa-light fa-basket-shopping-simple me-1"></i> Thêm vào giỏ hàng</a>
-							</div>
-						</div>
-					</div>
-					<div class="col-xl-4 col-lg-3 col-sm-2 col-12">
-						<div class="product-card">
-							<a href="product-detail.php" class="position-relative" title="" target="">
-								<img src="images/product/Rectangle573.webp" alt="" loading="lazy" />
-							</a>
-							<div class="new">New</div>
-							<div class="off">-33%</div>
-							<h2 class="title">
-								<a href="product-detail.php" title="" target="">Mermaid Tail Anklet</a>
-							</h2>
-							<div class="price">199.000 đ <s class="old ms-2">299.000 đ</s></div>
-							<div class="product-card-btn d-flex">
-								<div class="option w-100 pe-3">
-									<select name="product-version-1" id="product-version-1" class="form-select choose-product-version">
-										<option value="1" selected="selected">Đỏ (199.000 đ)</option>
-										<option value="2">Hồng (210.000 đ)</option>
-										<option value="3">Bạc (199.000 đ)</option>
-										<option value="4">Tím (299.000 đ)</option>
-									</select>
-								</div>
-								<a id="addToCart" href="javascript:;" title="" class="btn btn-primary btn-theme text-center"><i class="fa-regular fa-cart-plus"></i></a>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-    	</div>
-    </section>
-
-    <section class="section-padding">
-    	<div class="container">
-    		<div class="section-block mb-3 mb-lg-4">
-    			<h2 class="title-section">Sản phẩm nổi bật</h2>
-    		</div>
+	<section class="section-video">
+		<div class="container">
 			<div class="row">
-				<div class="col-xl-6 col-12">
-					<div class="row">
-						<div class="col-xl-12 col-lg-3 col-sm-2 col-12">
-							<div class="product-card">
-								<a href="product-detail.php" class="position-relative" title="" target="">
-									<img src="images/product/Rectangle573.webp" alt="" loading="lazy" />
-								</a>
-								<div class="new">New</div>
-								<div class="off">-33%</div>
-								<h2 class="title">
-									<a href="product-detail.php" title="" target="">Mermaid Tail Anklet</a>
-								</h2>
-								<div class="price">199.000 đ <s class="old ms-2">299.000 đ</s></div>
-								<div class="product-card-btn d-flex">
-									<div class="option w-100 pe-3">
-										<select name="product-version-1" id="product-version-1" class="form-select choose-product-version">
-											<option value="1" selected="selected">Đỏ (199.000 đ)</option>
-											<option value="2">Hồng (210.000 đ)</option>
-											<option value="3">Bạc (199.000 đ)</option>
-											<option value="4">Tím (299.000 đ)</option>
-										</select>
-									</div>
-									<a id="addToCart" href="javascript:;" title="" class="btn btn-primary btn-theme text-center"><i class="fa-regular fa-cart-plus"></i></a>
-								</div>
-							</div>
-						</div>
-						<div class="col-xl-12 col-lg-3 col-sm-2 col-12">
-							<div class="product-slider">
-								
-							</div>
+				<div class="col-md-6 col-12">
+					<div class="card-video">
+						<div class="video-frame">
+							<iframe width="1280" height="720" src="https://www.youtube.com/embed/Gdk3ZVSBTLw" title="GIỚI THIỆU VIÊN ĐẶT TÁI TẠO TẾ BÀO PIGINA | PIGINA KOREA" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 						</div>
 					</div>
 				</div>
-				<div class="col-xl-6 col-12">
-					
+				<div class="col-md-6 col-12">
+					<div class="card-video">
+						<div class="video-frame">
+							<iframe width="1280" height="720" src="https://www.youtube.com/embed/K8goY4SYeyU" title="DUNG DỊCH VỆ SINH TÁI TẠO TẾ BÀO PIGINA | PIGINA KOREA" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+						</div>
+					</div>
 				</div>
 			</div>
-    	</div>
-    </section>
+		</div>
+	</section>
 
 	<?php include 'layouts/footer.php'; ?>
 

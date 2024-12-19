@@ -115,8 +115,8 @@
 				  		<h3 class="text-uppercase fw-bold text-primary"><?php echo $LANG['category']; ?></h3>
 				  	</div>
 				  	<div class="card-body">
-				    	<a href="<?php echo _LINK_CATEGORY_CONTENT; ?>" class="btn btn-success d-block mb-2" title=""><?php echo $LANG['category-product']; ?></a>
-				    	<a href="<?php echo _LINK_CATEGORY_PRODUCT; ?>" class="btn btn-success d-block" title=""><?php echo $LANG['category-content']; ?></a>
+				    	<a href="<?php echo _LINK_CATEGORY_PRODUCT; ?>" class="btn btn-success d-block mb-2" title=""><?php echo $LANG['category-product']; ?></a>
+				    	<a href="<?php echo _LINK_CATEGORY_CONTENT; ?>" class="btn btn-success d-block" title=""><?php echo $LANG['category-content']; ?></a>
 				  	</div>
 				</div>
 			</div>
