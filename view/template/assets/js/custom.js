@@ -13,6 +13,23 @@ $(document).ready(function () {
 	});
 });
 
+/******************************
+  TESTIMONIAL
+******************************/
+var swiper = new Swiper(".webTestimonial", {
+	slidesPerView: 1,
+	pagination: {
+		el: ".swiper-pagination",
+		clickable: true,
+	},
+	breakpoints: {
+        1024: {
+          	slidesPerView: 2,
+          	spaceBetween: 50,
+        },
+    }
+});
+
 
 
 

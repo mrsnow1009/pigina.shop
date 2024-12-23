@@ -7,4 +7,5 @@
 	// var path_admin = '<?php //echo _ROOT_PATH_WEBSITE;?>';
 </script>
 <script type="text/javascript" src="../assets/js/lang/lang_vn.js"></script>
+<script type="text/javascript" src="../assets/plugin/swiper-11.0.6/js/swiper-bundle.min.js"></script>
 <script type="text/javascript" src="../view/template/assets/js/custom.js?t=<?php echo time(); ?>"></script>

@@ -28,4 +28,5 @@
 <link media="all" rel="stylesheet" type="text/css" href="../assets/css/font-awesome.6.6.0/css/sharp-light.css">
 
 <!-- custom css -->
+<link media="all" rel="stylesheet" type="text/css" href="../assets/plugin/swiper-11.0.6/css/swiper-bundle.min.css" />
 <link media="all" rel="stylesheet" type="text/css" href="../view/template/assets/css/custom.css?t=<?php echo time(); ?>" />
