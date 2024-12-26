@@ -118,9 +118,8 @@ h1, h2, h3, h4, h5, h6{
 }
 .navbar-menu .nav-link{
 	color: var(--rs-color-body);
-	text-transform: uppercase;
-	font-size: 15px;
-	font-weight: var(--rs-fw-bold);
+	font-size: 16px;
+	font-weight: var(--rs-fw-medium-small);
 	padding-left: 1rem !important;
 	padding-right: 1rem !important;
 }
@@ -315,6 +314,99 @@ h1, h2, h3, h4, h5, h6{
 }
 
 /***************************************************
+	footer
+***************************************************/
+.footer{
+	background-color: var(--rs-color-smoke);
+	padding-top: 50px;
+	padding-bottom: 20px;
+	font-size: 14px;
+}
+footer a{
+	color: var(--rs-color-body);
+}
+footer a:hover,
+footer a:focus{
+	color: var(--rs-color);
+}
+ul.company-info li{
+	margin-bottom: 5px;
+}
+.card-footer{
+	margin-bottom: 1.5rem
+}
+.card-footer .logo{
+	margin-bottom: 30px;
+}
+.card-footer .logo img{
+	max-width: 100%;
+	max-height: 40px;
+}
+.card-footer .footer-title{
+	position: relative;
+	font-size: 16px;
+	font-weight: var(--rs-font-medium);
+	line-height: 1em;
+	padding-bottom: 20px;
+	margin-bottom: 20px;
+	color: var(--rs-color-tpl);
+}
+.card-footer .footer-title:after{
+	content: '';
+	position: absolute;
+	bottom: -1px;
+	left: 0;
+	border-radius: 10px;
+	height: 2px;
+	width: 50px;
+	background-color: var(--rs-color);
+	background-image: -webkit-linear-gradient(to left, #fff, transparent);
+	background-image: linear-gradient(to left, #fff, transparent);
+}
+.footer-menu a{
+	margin-bottom: 5px;
+}
+.footer-menu-inline img{
+	width: 35px;
+}
+
+/* ================================================
+  copyright
+================================================= */
+.copyright-powered{
+	padding-top: 5px;
+	padding-bottom: 5px;
+	color: #fff;
+	font-size: 12px;
+	background-color: var(--rs-color-tpl);
+}
+.copyright-powered a{
+	color: #fff;
+}
+.powered-by{
+	text-align: right;
+}
+@media (max-width:991px) {
+	.copyright-powered{
+  		padding-left: 0;
+	}
+}
+@media (max-width: 1199px){
+	.copyright-powered{
+  		font-size: 12px;
+	}
+}
+@media (max-width:767px) {
+	.copyright,
+	.powered-by{
+  		text-align: center;
+	}
+	.powered-by{
+  		margin-top: 5px;
+	}
+}
+
+/***************************************************
 	product - card
 ***************************************************/
 .card-product .img{
@@ -446,6 +538,14 @@ h1, h2, h3, h4, h5, h6{
 .webTestimonial-wrapper .swiper-testimonial{
 	padding-bottom: 50px;
 }
+.webTestimonial-wrapper .swiper-testimonial .swiper-pagination-bullet{
+	width: 12px;
+	height: 12px;
+}
+.webTestimonial-wrapper .swiper-testimonial .swiper-pagination-bullet.swiper-pagination-bullet-active{
+	background-color: var(--rs-color-tpl)
+}
+
 .card-testimonial .testimonial-intro{
 	border: 2px solid rgba(var(--rs-color-tpl-rgb),.55);
 	padding: 20px;

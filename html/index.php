@@ -62,7 +62,7 @@
 		</div>
 	</section>
 
-	<section class="section-product pt-5 pb-5">
+	<section id="section-product" class="section-product pt-5 pb-5">
 		<div class="container">
 			<div class="row row-style">
 				<div class="col-xl-4 col-md-6 col-12">

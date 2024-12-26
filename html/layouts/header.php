@@ -4,7 +4,7 @@
 			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMobile" aria-controls="navbarMobile" aria-expanded="false" aria-label="Toggle navigation">
 				<span class="navbar-toggler-icon"></span>
 			</button>
-			<a class="navbar-brand me-0 me-lg-4 me-xl-5" href="#"><img src="images/logo/logo.png" alt=""></a>
+			<a class="navbar-brand me-0 me-lg-4 me-xl-5" href="#"><img src="images/logo/logo.png" alt="" /></a>
 			<div class="cart-header order-lg-2">
 				<a href="javascript:;" title="" class="show-cart-click">
 					<i class="fa-sharp fa-regular fa-basket-shopping-simple"></i>
