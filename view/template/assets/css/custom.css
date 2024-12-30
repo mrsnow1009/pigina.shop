@@ -72,6 +72,7 @@ h1, h2, h3, h4, h5, h6{
 	background-color: var(--rs-color-tpl);
 	border-color: var(--rs-color-tpl);
 	color: #fff;
+	border-radius: 0;
 }
 .btn-theme:hover,
 .btn-theme:focus{
@@ -641,12 +642,89 @@ ul.company-info li{
 	}
 }
 
+/***************************************************
+	product detail
+***************************************************/
+.product-detail{
+	position: sticky;
+	top: 120px;
+}
+.product-detail .title{
+	font-size: 26px;
+}
+.product-detail .price{
+	font-size: 20px;
+}
+.product-detail .price span{
+	font-size: 16px;
+	color: var(--rs-color-gray);
+}
+.product-detail .button-add-cart{
+	padding-top: 15px;
+	padding-bottom: 15px;
+	border-top: 1px solid var(--rs-border-color);
+	border-bottom: 1px solid var(--rs-border-color);
+}
+.button-add-cart .input-add-cart{
+	width: 130px;
+}
+.button-add-cart .input-group-text{
+	width: 40px;
+	justify-content: center;
+	cursor: pointer;
+}
+.button-add-cart .input-group-text:hover{
+	color: var(--rs-color-tpl);
+}
+.kenhbanhang-menu a{
+	display: inline-block;
+	border: 1px solid var(--rs-border-color);
+	padding: 5px 10px;
+	margin-right: 10px;
+}
+.kenhbanhang-menu img{
+	height: 30px;
+}
+@media screen and (max-width: 991px){
+	.product-detail{
+		top: 88px;
+	}
+	.product-detail .title{
+		font-size: 20px;
+	}
+	.product-detail .price{
+		font-size: 16px;
+	}
+	.product-detail .price span{
+		font-size: 14px;
+	}
+	.kenhbanhang-menu a{
+		display: block;
+		text-align: center;
+	}
+	.kenhbanhang-menu > a + a{
+		margin-top: 10px;
+	}
+}
 
-
-
-
-
-
+/* accordion */
+.accordionOverview .accordion-item{
+	border-radius: 0;
+	margin-bottom: 15px;
+	border-color: var(--rs-border-color);
+}
+.accordionOverview .accordion-button{
+	box-shadow: none;
+	border-radius: 0 !important;
+	padding-bottom: .75rem;
+	padding-top: .75rem;
+}
+.accordion-item:not(:first-of-type){
+	border-top: 1px solid var(--rs-border-color);
+}
+@media screen and (max-width: 991px){
+	
+}
 
 
 

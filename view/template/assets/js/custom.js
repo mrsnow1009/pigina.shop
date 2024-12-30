@@ -30,12 +30,3 @@ var swiper = new Swiper(".webTestimonial", {
     }
 });
 
-
-
-
-
-
-
-
-
-
