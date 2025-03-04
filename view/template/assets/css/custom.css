@@ -68,6 +68,13 @@ h1, h2, h3, h4, h5, h6{
 .color-theme-tpl{
 	color: var(--rs-color-tpl);
 }
+.color-theme-intro{
+	color: var(--rs-color-gray);
+}
+.fz-13px{
+	font-size: 13px;
+	line-height: 22px;
+}
 .btn-theme{
 	background-color: var(--rs-color-tpl);
 	border-color: var(--rs-color-tpl);
@@ -90,6 +97,27 @@ h1, h2, h3, h4, h5, h6{
 	.row-style{
 		gap: 40px 0;
 	}
+}
+
+.form-control::-webkit-input-placeholder,
+input::-webkit-input-placeholder {
+  color: #aaaaaa;
+  opacity: 1;
+}
+.form-control:-ms-input-placeholder,
+input:-ms-input-placeholder {
+  color: #aaaaaa;
+  opacity: 1;
+}
+.form-control::-ms-input-placeholder,
+input::-ms-input-placeholder {
+  color: #aaaaaa;
+  opacity: 1;
+}
+.form-control::placeholder,
+input::placeholder {
+  color: #aaaaaa;
+  opacity: 1;
 }
 
 /***************************************************
@@ -280,8 +308,12 @@ h1, h2, h3, h4, h5, h6{
 .mini-products .mini-product .price{
 	font-size: 14px;
 }
+.mini-products .mini-product .price span{
+	font-size: 12px;
+	color: var(--rs-color-gray);
+}
 .mini-products .mini-product .quantity .mini-quantity{
-	width: 100px;
+	width: 80px;
 	border-radius: 0;
 	line-height: var(--rs-line-height);
 	font-size: 14px;
@@ -405,6 +437,66 @@ ul.company-info li{
 	.powered-by{
   		margin-top: 5px;
 	}
+}
+
+/* ==================================================
+  PAGINATION
+================================================== */
+.pagination{
+  display: inline-block;
+  background-color: #fff;
+  padding: 5px;
+  border-radius: 27px;
+}
+.pagination li{
+  display: -webkit-inline-flex;
+  display: inline-flex;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.pagination .page-link{
+  color: #333;
+  border-width: 0;
+  text-align: center;
+  width: 45px;
+  height: 45px;
+  line-height: 33px;
+}
+.pagination li a:focus{
+  box-shadow: none;
+}
+.pagination .page-item.active .page-link{
+  background-color: var(--rs-color);
+  border-color: var(--rs-color);
+  color: #fff;
+}
+
+/* ================================================
+  BREADCRUMB
+================================================= */
+.section-breadcumb .breadcrumb li,
+.section-breadcumb .breadcrumb li a,
+.section-breadcumb .breadcrumb-item + .breadcrumb-item:before{
+  color: var(--rs-color-body)
+}
+.section-breadcumb{
+	background-color: var(--rs-color-smoke);
+	  padding-top: 12px;
+	  padding-bottom: 12px;
+}
+.section-breadcumb .breadcrumb li{
+  text-transform: uppercase;
+  font-size: 14px
+}
+@media (max-width: 767px) {
+  .section-breadcumb{
+    padding-top: 8px;
+    padding-bottom: 8px;
+  }
+  .section-breadcumb .breadcrumb li{
+    font-size: 13px;
+    text-transform: inherit;
+  }
 }
 
 /***************************************************
@@ -629,16 +721,39 @@ ul.company-info li{
 	font-size: 22px;
 	text-transform: uppercase;
 }
+.title-page{
+	margin-bottom: 20px;
+	font-size: 24px;
+	font-weight: var(--rs-fw-medium);
+	color: var(--rs-color-body);
+}
+.section-sticky{
+	position: sticky;
+  	top: 120px;
+}
+.content-detail img{
+	max-width: 100% !important;
+}
 @media screen and (max-width: 991px){
 	.title-section{
 		margin-bottom: 30px;
 		font-size: 20px;
+	}
+	.title-page{
+		margin-bottom: 15px;
+		font-size: 18px;
 	}
 }
 @media screen and (max-width: 767px){
 	.title-section{
 		margin-bottom: 20px;
 		font-size: 18px;
+	}
+	.content-detail{
+		font-size: 13px;
+	}
+	.content-detail img{
+		height: auto !important;
 	}
 }
 
@@ -666,7 +781,7 @@ ul.company-info li{
 	border-bottom: 1px solid var(--rs-border-color);
 }
 .button-add-cart .input-add-cart{
-	width: 130px;
+	width: 140px;
 }
 .button-add-cart .input-group-text{
 	width: 40px;
@@ -722,17 +837,120 @@ ul.company-info li{
 .accordion-item:not(:first-of-type){
 	border-top: 1px solid var(--rs-border-color);
 }
-@media screen and (max-width: 991px){
-	
+
+/***************************************************
+	news
+***************************************************/
+.card-news{
+	background-color: var(--rs-color-smoke);
+}
+.card-news .img{
+	position: relative;
+	height: 277px;
+	overflow: hidden;
+}
+.card-news .title{
+	font-weight: var(--rs-fw-medium);
+}
+.card-news .title a{
+	color: var(--rs-color-body);
+}
+.card-news .intro{
+	color: var(--rs-color-gray);
+	display: -webkit-box;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 3;
+    white-space: normal;
+    -webkit-box-orient: vertical;
+}
+@media screen and (min-width: 768px){
+	.card-news .title{
+		font-size: 20px;
+		min-height: 57px;
+		display: -webkit-box;
+	    overflow: hidden;
+	    text-overflow: ellipsis;
+	    -webkit-line-clamp: 2;
+	    white-space: normal;
+	    -webkit-box-orient: vertical;
+	}
+}
+@media screen and (max-width: 767px){
+	.card-news .title{
+		font-size: 16px;
+	}
+	.card-news .intro{
+		font-size: 13px;
+	}
 }
 
+/***************************************************
+	news detail
+***************************************************/
+.news-recent{
+	background-color: var(--rs-color-smoke);
+}
+.news-recent .recent-title{
+	font-size: 18px;
+	text-transform: uppercase;
+}
+.recent-list .recent-item + .recent-item{
+	margin-top: 20px;
+}
+.recent-list .recent-item .img-wrapper{
+	height: 80px;
+	width: 120px;
+	overflow: hidden;
+}
+.recent-list .recent-item img{
+	width: 100%;
+}
+.recent-list .recent-item .title {
+	font-size: 15px;
+	display: -webkit-box;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 2;
+    white-space: normal;
+    -webkit-box-orient: vertical;
+}
+.recent-list .recent-item .title a{
+	color: var(--rs-color-body);
+}
+@media screen and (max-width: 991px){
+	.recent-list .recent-item + .recent-item{
+		margin-top: 15px;
+	}
+}
 
+/***************************************************
+	consultant
+***************************************************/
+.box-consultant{
+	background-color: var(--rs-color-smoke);
+	border-radius: 10px;
+	overflow: hidden;
+	border: 2px solid var(--rs-color-tpl)
+}
+.box-consultant .title{
+	font-size: 18px;
+	text-transform: uppercase;
+}
+.form-consultant .form-control{
+	font-size: 14px;
+}
 
-
-
-
-
-
+/***************************************************
+	cart
+***************************************************/
+.cart-right-list .cart-right-item {
+	margin-bottom: 1rem;
+}
+.cart-right-list .cart-right-item .name{
+	font-size: 14px;
+	margin-bottom: 5px;
+}
 
 
 

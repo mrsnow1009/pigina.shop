@@ -4,30 +4,33 @@
 			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMobile" aria-controls="navbarMobile" aria-expanded="false" aria-label="Toggle navigation">
 				<span class="navbar-toggler-icon"></span>
 			</button>
-			<a class="navbar-brand me-0 me-lg-4 me-xl-5" href="index.php"><img src="images/logo/logo.png" alt="" /></a>
+			<a class="navbar-brand me-0 me-lg-0" href="index.php"><img src="images/logo/logo.png" alt="" /></a>
 			<div class="cart-header order-lg-2">
 				<a href="javascript:;" title="" class="show-cart-click">
 					<i class="fa-sharp fa-regular fa-basket-shopping-simple"></i>
 					<span>3</span>
 				</a>
 			</div>
-			<div class="collapse navbar-collapse" id="navbarMobile">
-				<ul class="navbar-nav navbar-menu me-lg-auto mb-2 mb-lg-0">
-					<li class="nav-item">
+			<div class="collapse navbar-collapse justify-content-lg-center" id="navbarMobile">
+				<ul class="navbar-nav navbar-menu mb-2 mb-lg-0">
+					<!-- <li class="nav-item">
 						<a class="nav-link active" aria-current="page" href="#">Trang chủ</a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link" href="gioi-thieu.php" title="">Giới thiệu</a>
-					</li>
+					</li> -->
 					<li class="nav-item">
 						<a class="nav-link" href="san-pham.php" title="">Sản phẩm Pigina</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="tin-tuc.php" title="">Kiến thức sức khỏe</a>
+						<a class="nav-link" href="tin-tuc.php" title="">Cẩm nang phụ nữ</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="lien-he.php" title="">Liên hệ</a>
+						<a class="nav-link" href="faq.php" title="">Câu hỏi thường gặp</a>
 					</li>
+					<!-- <li class="nav-item">
+						<a class="nav-link" href="video.php" title="">Video</a>
+					</li> -->
+					<!-- <li class="nav-item">
+						<a class="nav-link" href="lien-he.php" title="">Liên hệ</a>
+					</li> -->
 				</ul>
 			</div>
 		</div>
@@ -61,7 +64,7 @@
 							</div>
 						</div>
 						<div class="d-flex justify-content-between align-items-center">
-							<div class="price">495.000 đ</div>
+							<div class="price">495.000 đ <span class="text-decoration-line-through ms-3">500.000 đ</span></div>
 							<div class="quantity">
 								<input type="text" name="quantity" class="form-control text-center mini-quantity" data-id="1" value="1" />
 							</div>
