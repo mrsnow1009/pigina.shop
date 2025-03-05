@@ -774,7 +774,8 @@ $sql ="SELECT `".$this->fields["left"]."` FROM `".$this->table."` s WHERE `".$th
 
 class json_tree extends _tree_struct { 
     
-	public $filtercate="";
+	public $filtercate = "";
+	public $add_fields = array();
 	
 	function __construct(
 	

@@ -12,6 +12,7 @@ class database {
     public $database = "";
     public $connect;
     public $lastid;
+    public $record;
 
     public $row;
     private $errno = 0;
@@ -25,11 +26,11 @@ class database {
             exit();
         }
 
-        $WEBCONFIG      = unserialize(WEBCONFIG);
-	   	$this->host     = $WEBCONFIG["DB"]['hosting'];
-	   	$this->database = $WEBCONFIG["DB"]['name_db'];
-	   	$this->user     = $WEBCONFIG["DB"]['user_db'];
-	   	$this->password = $WEBCONFIG["DB"]['pass_db'];
+        $WEBCONFIG          = unserialize(WEBCONFIG);
+	   	$this->host        = $WEBCONFIG["DB"]['hosting'];
+	   	$this->database    = $WEBCONFIG["DB"]['name_db'];
+	   	$this->user        = $WEBCONFIG["DB"]['user_db'];
+	   	$this->pass        = $WEBCONFIG["DB"]['pass_db'];
 
     }
 

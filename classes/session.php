@@ -32,7 +32,7 @@ class Session
 		$this->maxCookie=200;		//since cookie lenght is limited, I've limited the number of cookies
 		$this->cookieLenght=4000;	//max cookie length (it depends on browser)
 		$this->duratacookie=3600*8;//cookie life time
-		$this->secred="secret";		//secret keyword to crypt/decrypt, change this to customize encryption
+		$this->secret="secret";		//secret keyword to crypt/decrypt, change this to customize encryption
 		if ($this->use_cookie=="yes") {
 		} elseif ($this->use_cookie=="zipcook") {
 			$this->stringone = $this->prelevaStringaTotale();
