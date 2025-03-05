@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Sản phẩm</title>
+	<title>Sản phẩm Pigina</title>
 
 	<?php include 'layouts/head.php'; ?>
 
@@ -15,14 +15,15 @@
             <nav aria-label="breadcrumb">
                 <ol class="breadcrumb mb-0">
                     <li class="breadcrumb-item"><a href="#">Trang chủ</a></li>
-                    <li class="breadcrumb-item active" aria-current="page">Sản phẩm</li>
+                    <li class="breadcrumb-item active" aria-current="page">Sản phẩm Pigina</li>
                 </ol>
             </nav>
 	    </div>
     </section>
 
-	<section class="section-product pt-3 pb-3 pt-lg-5 pb-lg-5">
+	<section class="section-product bg-white pt-3 pb-3 pt-lg-5 pb-lg-5">
 		<div class="container">
+			<h1 class="title-page text-uppercase mb-4">Sản phẩm Pigina</h1>
 			<div class="row row-style">
 				<div class="col-xl-4 col-md-6 col-12">
 					<div class="card-product">

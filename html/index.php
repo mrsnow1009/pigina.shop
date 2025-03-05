@@ -10,7 +10,7 @@
 
 	<?php include 'layouts/header.php'; ?>
 
-	<section class="section-padding pt-3 pb-3">
+	<section class="section-padding bg-white pt-3 pb-3">
 		<div class="container">
 			<div id="bannerHomepage" class="carousel slide">
 				<div class="carousel-inner">
@@ -62,7 +62,7 @@
 		</div>
 	</section>
 
-	<section id="section-product" class="section-product pt-5 pb-5">
+	<section id="section-product" class="section-product bg-white pt-5 pb-5">
 		<div class="container">
 			<div class="row row-style">
 				<div class="col-xl-4 col-md-6 col-12">
@@ -204,7 +204,7 @@
 		</div>
 	</section>
 
-	<section class="section-padding pt-5 pb-5">
+	<section class="section-padding bg-white pt-5 pb-5">
 		<div class="container">
 			<h3 class="title-section text-center">Cảm nhận của khách hàng</h3>
 			<div class="webTestimonial-wrapper">

@@ -21,8 +21,9 @@
 	    </div>
     </section>
 
-	<section class="section-faq pt-3 pb-3 pt-lg-5 pb-lg-5">
+	<section class="section-faq bg-white pt-3 pb-3 pt-lg-5 pb-lg-5">
 		<div class="container">
+			<h1 class="title-page text-uppercase mb-4">Câu hỏi thường gặp</h1>
 			<div class="row">
 				<div class="col-lg-8 col-12">
 					<div class="accordion accordionOverview" id="accordionFaq">
@@ -107,29 +108,27 @@
 				</div>
 				<div class="col-lg-4 col-12">
 					<div class="section-sticky">
-						<div class="section-sticky">
-							<div class="box-consultant p-3 p-lg-4">
-								<h3 class="title text-center mb-4">Hỏi đáp chuyên gia</h3>
-								<div class="form-consultant">
-									<form action="" class="needs-validation" novalidate>
-										<div class="mb-3">
-											<input type="text" class="form-control" name="txtFullname" id="txtFullname" required="required" placeholder="Họ và Tên *"  value="" />
-										</div>
-										<div class="mb-3">
-											<input type="text" class="form-control" name="txtPhone" id="txtPhone" required="required" placeholder="Điện thoại/Zalo/Email ..."  value="" />
-										</div>
-										<div class="mb-3">
-											<textarea name="txtContent" id="txtContent" rows="5" class="form-control" placeholder="Câu hỏi cần tư vấn ..." required="required"></textarea>
-										</div>
-										<div class="mb-3">
-											<div class="color-theme-intro text-center fz-13px">Quý khách vui lòng điền đầy đủ thông tin để nhận được tư vấn từ chúng tôi</div>
-										</div>
-										<div class="text-end">
-											<button class="btn btn-theme rounded-pill ps-4 pe-4" type="submit">Gửi ngay <i class="fa-regular fa-paper-plane ms-2"></i></button>
-											<input name="txtAction" id="txtAction" type="hidden" required="required" class="form-control" value="consultant" />
-										</div>
-									</form>
-								</div>
+						<div class="box-consultant p-3 p-lg-4">
+							<h3 class="title text-center mb-4">Hỏi đáp chuyên gia</h3>
+							<div class="form-consultant">
+								<form action="" class="needs-validation" novalidate>
+									<div class="mb-3">
+										<input type="text" class="form-control" name="txtFullname" id="txtFullname" required="required" placeholder="Họ và Tên *"  value="" />
+									</div>
+									<div class="mb-3">
+										<input type="text" class="form-control" name="txtPhone" id="txtPhone" required="required" placeholder="Điện thoại/Zalo/Email ..."  value="" />
+									</div>
+									<div class="mb-3">
+										<textarea name="txtContent" id="txtContent" rows="5" class="form-control" placeholder="Câu hỏi cần tư vấn ..." required="required"></textarea>
+									</div>
+									<div class="mb-3">
+										<div class="color-theme-intro text-center fz-13px">Quý khách vui lòng điền đầy đủ thông tin để nhận được tư vấn từ chúng tôi</div>
+									</div>
+									<div class="text-end">
+										<button class="btn btn-theme rounded-pill ps-4 pe-4" type="submit">Gửi ngay <i class="fa-regular fa-paper-plane ms-2"></i></button>
+										<input name="txtAction" id="txtAction" type="hidden" required="required" class="form-control" value="consultant" />
+									</div>
+								</form>
 							</div>
 						</div>
 					</div>

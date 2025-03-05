@@ -60,14 +60,15 @@
 						<a href="#" title="" class="d-block">Hướng dẫn đổi trả</a>
 						<a href="#" title="" class="d-block">Hướng dẫn chuyển khoản</a>
 						<a href="#" title="" class="d-block">Hướng dẫn trả hoàn hàng</a>
+						<a href="404.php" title="" class="d-block">404 Page not found</a>
 					</nav>
 				</div>
 			</div>
 		</div>
 	</div>
 </footer>
-<div class="copyright-powered">
-    <div class="container">
+<div class="container">
+	<div class="copyright-powered ps-2 pe-2 ps-xl-3 pe-xl-3">
         <div class="row">
             <div class="col-md-9 col-12">
                  <div class="copyright">© 2024 pigina.shop bảo lưu và giữ bản quyền mọi thông tin và hình ảnh.</div>

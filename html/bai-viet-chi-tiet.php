@@ -21,7 +21,7 @@
 	    </div>
     </section>
 
-	<section class="section-news pt-3 pb-3 pt-lg-5 pb-lg-5">
+	<section class="section-news bg-white pt-3 pb-3 pt-lg-5 pb-lg-5">
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-8 col-12">

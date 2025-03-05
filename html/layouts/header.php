@@ -66,7 +66,7 @@
 						<div class="d-flex justify-content-between align-items-center">
 							<div class="price">495.000 đ <span class="text-decoration-line-through ms-3">500.000 đ</span></div>
 							<div class="quantity">
-								<input type="text" name="quantity" class="form-control text-center mini-quantity" data-id="1" value="1" />
+								<div class="mini-quantity text-center border">1</div>
 							</div>
 						</div>
 					</div>
@@ -87,7 +87,7 @@
 						<div class="d-flex justify-content-between align-items-center">
 							<div class="price">495.000 đ</div>
 							<div class="quantity">
-								<input type="text" name="quantity" class="form-control text-center mini-quantity" data-id="1" value="1" />
+								<div class="mini-quantity text-center border">1</div>
 							</div>
 						</div>
 					</div>
@@ -108,7 +108,7 @@
 						<div class="d-flex justify-content-between align-items-center">
 							<div class="price">495.000 đ</div>
 							<div class="quantity">
-								<input type="text" name="quantity" class="form-control text-center mini-quantity" data-id="1" value="1" />
+								<div class="mini-quantity text-center border">1</div>
 							</div>
 						</div>
 					</div>

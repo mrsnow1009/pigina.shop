@@ -29,12 +29,15 @@
 
   --rs-font-family: "Inter", sans-serif;
   --rs-font-family-heading: "Inter", sans-serif;
+
+  --rs-font-size-body: 16px;
 }
 body{
 	font-family: var(--rs-font-family);
-    font-size: 16px;
+    font-size: var(--rs-font-size-body);
     font-weight: normal;
     line-height: 28px;
+    background-color: var(--rs-color-smoke);
 }
 
 /***************************************************
@@ -71,9 +74,22 @@ h1, h2, h3, h4, h5, h6{
 .color-theme-intro{
 	color: var(--rs-color-gray);
 }
+.bg-theme{
+	background-color: var(--rs-color);
+}
+.bg-theme-tpl{
+	background-color: var(--rs-color-tpl);
+}
 .fz-13px{
 	font-size: 13px;
 	line-height: 22px;
+}
+.fz-12px{
+	font-size: 12px;
+	line-height: 20px;
+}
+.fz-body{
+    font-size: var(--rs-font-size-body);
 }
 .btn-theme{
 	background-color: var(--rs-color-tpl);
@@ -87,11 +103,23 @@ h1, h2, h3, h4, h5, h6{
 	border-color: var(--rs-color-tpl);
 	color: var(--rs-color-tpl);
 }
+
+.btn-transparent{
+	background-color: transparent;
+	border-color: var(--rs-color-tpl);
+	color: var(--rs-color-tpl);
+}
+.btn-transparent:hover,
+.btn-transparent:focus{
+	background-color: var(--rs-color-tpl);
+	color: #fff;
+}
 .row-style{
 	gap: 40px 0;
 }
 @media screen and (max-width: 767px){
-	.btn-theme{
+	.btn-theme,
+	.btn-transparent{
 		font-size: 13px;
 	}	
 	.row-style{
@@ -313,10 +341,12 @@ input::placeholder {
 	color: var(--rs-color-gray);
 }
 .mini-products .mini-product .quantity .mini-quantity{
-	width: 80px;
-	border-radius: 0;
+	width: 50px;
 	line-height: var(--rs-line-height);
 	font-size: 14px;
+	padding-top: .375rem;
+	padding-bottom: .375rem;
+	background-color: var(--rs-color-smoke);
 }
 .mini-foot{
 	box-shadow: 0 0 8px #0000004d;
@@ -951,10 +981,68 @@ ul.company-info li{
 	font-size: 14px;
 	margin-bottom: 5px;
 }
+.tb-cart .tb-body > .tbtr + .tbtr{
+	margin-top: 1rem;
+	padding-top: 1rem;
+	border-top: 1px solid var(--rs-color-smoke);
+}
 
+.tbtd-quanlity .button-add-cart .input-add-cart{
+	width: 120px;
+}
+.w-image{
+	width: 70px;
+}
 
+@media screen and (min-width: 992px){
+	.w-total,
+	.w-reduced-price,
+	.w-price{
+		width: 130px;
+	}
+	.w-total{
+		text-align: right;
+	}
+	.w-quanlity{
+		width: 120px;
+	}
+}
+@media screen and (min-width: 1200px){
+	.w-total,
+	.w-reduced-price,
+	.w-price{
+		width: 150px;
+	}
+}
+@media screen and (min-width: 768px) and (max-width: 991px){
+	.w-quanlity{
+		width: 120px;
+	}
+	.w-total,
+	.w-reduced-price,
+	.w-price{
+		width: 100px;
+	}
+	.w-total{
+		text-align: right;
+	}
+}
+@media screen and (max-width: 767px){
+	.tb-cart .tb-body > .tbtr > div{
+		padding-top: 5px;
+		padding-bottom: 5px;
+	}
+}
 
+/***************************************************
+	checkout
+***************************************************/
 
+@media screen and (min-width: 576px){
+	form.form-order .text-label{
+		width: 150px;
+	}
+}
 
 
 

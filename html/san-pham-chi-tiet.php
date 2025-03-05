@@ -21,7 +21,7 @@
 	    </div>
     </section>
 
-	<section class="section-product pt-3 pb-3 pt-lg-5 pb-lg-5">
+	<section class="section-product bg-white pt-3 pb-3 pt-lg-5 pb-lg-5">
 		<div class="container">
 			<div class="row">
 				<div class="col-md-5 col-12">
@@ -44,13 +44,12 @@
 									<div class="d-flex justify-content-start">
 										<div class="input-group input-add-cart">
 											<span class="input-group-text rounded-0" id="quantity-minus">-</span>
-											<input autocomplete="off" type="text" class="form-control text-center" placeholder="" data-productId="1" name="quantity-input"  id="quantity-input" value="1" />
+											<input autocomplete="off" type="text" class="form-control text-center" placeholder="" data-productId="1" name="quantity-input" id="quantity-input" value="1" />
 											<span class="input-group-text rounded-0" id="quantity-plus">+</span>
 										</div>
 										<a href="javascript:;" class="btn btn-theme btn-add-Cart ms-3" onclick="addToCart()" id="addToCart">Thêm vào giỏ hàng</a>
 									</div>
 								</div>
-								
 							</div>
 							<div class="overview">
 								<div class="accordion accordionOverview" id="accordionOverview">
@@ -134,7 +133,7 @@
 		</div>
 	</section>
 
-	<section class="section-product">
+	<section class="section-product bg-white">
 		<div class="container">
 			<div class="border-top pt-4 pb-5">
 				<h3 class="title-section">Các sản phẩm khác</h3>
