@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 25, 2024 at 12:28 PM
+-- Generation Time: Mar 05, 2025 at 03:19 PM
 -- Server version: 10.4.27-MariaDB
 -- PHP Version: 8.2.0
 
@@ -18,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `tuyetshop`
+-- Database: `db_pigina`
 --
 
 -- --------------------------------------------------------
@@ -150,13 +150,6 @@ CREATE TABLE `tblbrand` (
   `updated_by` int(9) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
---
--- Dumping data for table `tblbrand`
---
-
-INSERT INTO `tblbrand` (`ID`, `t_status`, `title`, `urlseo`, `imgURL`, `intro`, `t_index`, `lang`, `created_by`, `created_date`, `updated_date`, `updated_by`) VALUES
-(1, 1, 'Laura Sunrise', '', '', '', 1, 'vn', 1, 1714643737, 1714643737, 1);
-
 -- --------------------------------------------------------
 
 --
@@ -193,19 +186,27 @@ CREATE TABLE `tblcategory` (
 --
 
 INSERT INTO `tblcategory` (`ID`, `code`, `code_module`, `title`, `title_search`, `urlseo`, `t_status`, `position`, `left`, `right`, `level`, `parent_id`, `intro`, `description`, `imgURL`, `menu`, `url`, `lang`, `created_by`, `created_date`, `updated_date`, `updated_by`) VALUES
-(1, '_ROOT', 'ROOT', 'ROOT', 'root', '', 1, 0, 1, 28, 0, 0, '', '', '', '', '', 'vn', 1, 0, 0, 1),
-(2, 'VN', '_LANGUAGE', 'Vietnamese', '', '', 1, 1, 2, 21, 1, 1, '', '', '', '', '', 'vn', 1, 0, 0, 1),
-(3, 'EN', '_LANGUAGE', 'English', '', '', 2, 2, 22, 25, 1, 1, '', '', '', '', '', 'en', 1, 0, 0, 1),
-(5, '_CONTENT', 'RSCMS', 'Nội dung', '', '', 2, 5, 3, 10, 2, 2, '', '', '', '', '', 'vn', 1, 0, 0, 1),
-(6, '_PRODUCT', 'RSPRODUCT', 'Sản phẩm', '', '', 1, 6, 11, 20, 2, 2, '', '', '', '', '', 'vn', 1, 0, 0, 1),
-(8, '_PRODUCT', 'RSPRODUCT', 'Cà phê', 'Ca phe', 'ca-phe', 1, 8, 12, 15, 3, 6, '', '', '', '', '', 'vn', 1, 0, 1692174406, 1),
-(9, '_PRODUCT', 'RSPRODUCT', 'Nước hoa', 'Nuoc hoa', 'nuoc-hoa', 1, 8, 16, 19, 3, 6, '', '', '', '', '', 'vn', 1, 0, 1692173691, 1),
-(10, '_PRODUCT', 'RSPRODUCT', 'Nước hoa Pháp', 'Nuoc hoa Phap', 'nuoc-hoa-phap', 1, 8, 17, 18, 4, 9, '', '', '', '', '', 'vn', 1, 0, 1692173705, 1),
-(11, '_CONTENT', 'RSCMS', 'Content', '', '', 1, 2, 23, 24, 2, 3, '', '', '', '', '', 'en', 1, 0, 0, 1),
-(13, '_PRODUCT', 'RSPRODUCT', 'Laura Sunshine', 'Laura Sunshine', 'laura-sunshine', 1, 12, 13, 14, 4, 8, '', '', '', '', '', 'vn', 1, 1692173746, 1695197219, 1),
-(14, '_NEWS', 'RSCMS', 'Tin tức', 'Tin tuc', 'tin-tuc', 1, 13, 4, 5, 3, 5, '', '', '', '', '', 'vn', 1, 1692178633, 1692178633, 1),
-(15, '_CONTENT', 'RSCMS', 'Video', 'Video', 'video', 1, 14, 6, 7, 3, 5, '', '', '', '', '', 'vn', 1, 1694426575, 1694426595, 1),
-(16, '_CONTACT', 'RSCMS', 'Liên hệ', 'Lien he', 'lien-he', 1, 100, 8, 9, 3, 5, '', '', '', '', '', 'vn', 1, 1695197183, 1695197183, 1);
+(1, '_ROOT', 'ROOT', 'ROOT', 'root', '', 1, 0, 1, 42, 0, 0, '', '', '', '', '', 'vn', 1, 0, 0, 1),
+(2, 'VN', '_LANGUAGE', 'Vietnamese', '', '', 1, 1, 2, 37, 1, 1, '', '', '', '', '', 'vn', 1, 0, 0, 1),
+(3, 'EN', '_LANGUAGE', 'English', '', '', 2, 2, 38, 41, 1, 1, '', '', '', '', '', 'en', 1, 0, 0, 1),
+(5, '_CONTENT', 'RSCMS', 'Nội dung', '', '', 1, 5, 3, 32, 2, 2, '', '', '', '', '', 'vn', 1, 0, 0, 1),
+(6, '_PRODUCT', 'RSPRODUCT', 'Sản phẩm', '', '', 1, 6, 33, 36, 2, 2, '', '', '', '', '', 'vn', 1, 0, 0, 1),
+(11, '_CONTENT', 'RSCMS', 'Content', '', '', 2, 2, 39, 40, 2, 3, '', '', '', '', '', 'en', 1, 0, 0, 1),
+(14, '_NEWS', 'RSCMS', 'Cẩm nang phụ nữ', 'Cam nang phu nu', 'cam-nang-phu-nu', 1, 20, 4, 5, 3, 5, '', '', '', '1', '', 'vn', 1, 1692178633, 1741183911, 1),
+(16, '_CONTACT', 'RSCMS', 'Liên hệ', 'Lien he', 'lien-he', 2, 100, 8, 9, 3, 5, '', '', '', '', '', 'vn', 1, 1695197183, 1695197183, 1),
+(17, '_PRODUCT', 'RSPRODUCT', 'Sản phẩm Pigina', 'San pham Pigina', 'san-pham-pigina', 1, 10, 34, 35, 3, 6, '', '', '', '1', '', 'vn', 1, 1731590639, 1741183895, 1),
+(18, '_CONTENT', 'RSCMS', 'Câu hỏi thường gặp', 'Cau hoi thuong gap', 'cau-hoi-thuong-gap', 1, 50, 6, 7, 3, 5, '', '', '', '1', '', 'vn', 1, 1741183776, 1741183916, 1),
+(19, '_CONTENT', 'RSCMS', 'Chính sách', 'Chinh sach', 'chinh-sach', 1, 200, 10, 21, 3, 5, '', '', '', '', '', 'vn', 1, 1741184105, 1741184105, 1),
+(20, '_CONTENT', 'RSCMS', 'Cam kết bán hàng', 'Cam ket ban hang', 'cam-ket-ban-hang', 1, 210, 11, 12, 4, 19, '', '', '', '', '', 'vn', 1, 1741184126, 1741184126, 1),
+(21, '_CONTENT', 'RSCMS', 'Chính sách bảo mật', 'Chinh sach bao mat', 'chinh-sach-bao-mat', 1, 220, 13, 14, 4, 19, '', '', '', '', '', 'vn', 1, 1741184143, 1741184143, 1),
+(22, '_CONTENT', 'RSCMS', 'Chính sách vận chuyển', 'Chinh sach van chuyen', 'chinh-sach-van-chuyen', 1, 230, 15, 16, 4, 19, '', '', '', '', '', 'vn', 1, 1741184156, 1741184156, 1),
+(23, '_CONTENT', 'RSCMS', 'Chính sách thanh toán', 'Chinh sach thanh toan', 'chinh-sach-thanh-toan', 1, 240, 17, 18, 4, 19, '', '', '', '', '', 'vn', 1, 1741184169, 1741184169, 1),
+(24, '_CONTENT', 'RSCMS', 'Đổi trả và hoàn tiền', 'Doi tra va hoan tien', 'doi-tra-va-hoan-tien', 1, 250, 19, 20, 4, 19, '', '', '', '', '', 'vn', 1, 1741184181, 1741184181, 1),
+(25, '_CONTENT', 'RSCMS', 'Hướng dẫn', 'Huong dan', 'huong-dan', 1, 300, 22, 31, 3, 5, '', '', '', '', '', 'vn', 1, 1741184194, 1741184194, 1),
+(26, '_CONTENT', 'RSCMS', 'Hướng dẫn mua hàng', 'Huong dan mua hang', 'huong-dan-mua-hang', 1, 310, 23, 24, 4, 25, '', '', '', '', '', 'vn', 1, 1741184209, 1741184209, 1),
+(27, '_CONTENT', 'RSCMS', 'Hướng dẫn đổi trả', 'Huong dan doi tra', 'huong-dan-doi-tra', 1, 320, 25, 26, 4, 25, '', '', '', '', '', 'vn', 1, 1741184230, 1741184230, 1),
+(28, '_CONTENT', 'RSCMS', 'Hướng dẫn chuyển khoản', 'Huong dan chuyen khoan', 'huong-dan-chuyen-khoan', 1, 330, 27, 28, 4, 25, '', '', '', '', '', 'vn', 1, 1741184241, 1741184241, 1),
+(29, '_CONTENT', 'RSCMS', 'Hướng dẫn trả hoàn hàng', 'Huong dan tra hoan hang', 'huong-dan-tra-hoan-hang', 1, 340, 29, 30, 4, 25, '', '', '', '', '', 'vn', 1, 1741184257, 1741184257, 1);
 
 -- --------------------------------------------------------
 
@@ -224,14 +225,6 @@ CREATE TABLE `tblcolor` (
   `updated_date` int(20) NOT NULL,
   `updated_by` int(9) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
-
---
--- Dumping data for table `tblcolor`
---
-
-INSERT INTO `tblcolor` (`ID`, `title_vn`, `title_en`, `code`, `t_status`, `created_date`, `created_by`, `updated_date`, `updated_by`) VALUES
-(1, 'Đen', 'Black', '#000000', 1, 1715250259, 1, 1715250362, 1),
-(2, 'Đỏ', 'Red', '#ff0000', 1, 1715250843, 1, 1715250843, 1);
 
 -- --------------------------------------------------------
 
@@ -273,8 +266,8 @@ CREATE TABLE `tblcompany` (
 --
 
 INSERT INTO `tblcompany` (`ID`, `t_status`, `name`, `address`, `copyright`, `brand`, `logo`, `logo_footer`, `logo_favicon`, `website`, `fax`, `hotline`, `phone`, `email`, `facebook`, `twitter`, `youtube`, `instagram`, `linkedin`, `pinterest`, `embedgooglemap`, `lang`, `created_date`, `created_by`, `updated_date`, `updated_by`) VALUES
-(1, 1, 'Tổng công ty ABC', '159 Điện Biên Phủ, P. 15, Q. Bình Thạnh', 'Copyright 2003', 'ABC Group', 'resources/upload/company/1/logo/logo_rf.png', 'resources/upload/company/1/footer/logo-framework.png', 'resources/upload/company/1/favicon/logo4.png', 'abc.com', '02873015631', '02873015630', '0909090909', 'abc@gmail.com', 'facebook', 'twitter', 'youtube', 'instagram', 'linkedin', 'pinterest', '', 'vn', 1711963980, 1, 1712048901, 1),
-(2, 1, 'ABC Group', '159 Điện Biên Phủ, P. 15, Q. Bình Thạnh', 'Copyright 2003', 'ABC Group', '', '', '', 'abc.com', '02873015631', '02873015630', '0909090909', 'abc@gmail.com', 'facebook', 'twitter', 'youtube', 'instagram', 'linkedin', 'pinterest', '', 'en', 1711964204, 1, 1711964204, 1);
+(1, 1, 'Tổng công ty ABC', '159 Điện Biên Phủ, P. 15, Q. Bình Thạnh', 'Copyright 2003', 'ABC Group', '', '', '', 'abc.com', '02873015631', '02873015630', '0909090909', 'abc@gmail.com', 'facebook', 'twitter', 'youtube', 'instagram', 'linkedin', 'pinterest', '', 'vn', 1711963980, 1, 1731591218, 1),
+(2, 1, 'ABC Group', '159 Điện Biên Phủ, P. 15, Q. Bình Thạnh', 'Copyright 2003', 'ABC Group', '', '', '', 'abc.com', '02873015631', '02873015630', '0909090909', 'abc@gmail.com', 'facebook', 'twitter', 'youtube', 'instagram', 'linkedin', 'pinterest', '', 'en', 1711964204, 1, 1731591221, 1);
 
 -- --------------------------------------------------------
 
@@ -359,20 +352,6 @@ CREATE TABLE `tblcontent` (
   `updated_by` int(9) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
---
--- Dumping data for table `tblcontent`
---
-
-INSERT INTO `tblcontent` (`ID`, `cateid`, `t_status`, `title`, `title_search`, `urlseo`, `url`, `imgURL`, `intro`, `content`, `type_art`, `t_index`, `most_view`, `lang`, `publish_date`, `created_by`, `created_date`, `updated_date`, `updated_by`) VALUES
-(1, 12, 1, 'Ma thú kiếm thánh, dị giới tung hoành', 'Ma thu kiem thanh di gioi tung hoanh', 'ma-thu-kiem-thanh-di-gioi-tung-hoanh', '', '', 'intro', '&lt;p&gt;content content&lt;/p&gt;', 'content', 1, 0, 'vn', 1691773200, 1, 1689669637, 1692593082, 1),
-(2, 5, 1, 'Bài viết 1', 'Bai viet 1', 'bai-viet-1', '', '', '', '', 'content', 2, 0, 'vn', 0, 1, 1721882888, 1721882888, 1),
-(3, 14, 1, 'Tin tức 1', 'Tin tuc 1', 'tin-tuc-1', '', '', '', '', 'news', 3, 0, 'vn', 0, 1, 1721882912, 1721882912, 1),
-(4, 14, 1, 'Tin tức 2', 'Tin tuc 2', 'tin-tuc-2', '', '', '', '', 'news', 4, 0, 'vn', 0, 1, 1721882966, 1721882966, 1),
-(5, 14, 1, 'Tin tức 3', 'Tin tuc 3', 'tin-tuc-3', '', '', '', '', 'news', 5, 0, 'vn', 0, 1, 1721883085, 1721883085, 1),
-(6, 14, 1, 'Tin tức 4', 'Tin tuc 4', 'tin-tuc-4', '', '', '', '', 'news', 6, 0, 'vn', 0, 1, 1721883147, 1721883147, 1),
-(7, 14, 1, 'Tin tức 5', 'Tin tuc 5', 'tin-tuc-5', '', '', '', '', 'news', 7, 0, 'vn', 0, 1, 1721883160, 1721883160, 1),
-(8, 14, 1, 'Tin tức 6', 'Tin tuc 6', 'tin-tuc-6', '', '', '', '', 'news', 8, 0, 'vn', 0, 1, 1721883168, 1721883168, 1);
-
 -- --------------------------------------------------------
 
 --
@@ -421,14 +400,6 @@ CREATE TABLE `tbllibrary` (
   `created_by` int(9) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
---
--- Dumping data for table `tbllibrary`
---
-
-INSERT INTO `tbllibrary` (`ID`, `nodeid`, `code_module`, `source`, `title`, `intro`, `link`, `t_index`, `created_date`, `created_by`) VALUES
-(1, 2, 'RSPRODUCT', 'resources/upload/product/slider/2/cap-nhat-dong-gop.jpg', '', '', '', 0, 1695187642, 1),
-(3, 1, 'RSPRODUCT', 'resources/upload/product/slider/1/huong-dan-dong-gop.jpg', '', '', '', 0, 1695187651, 1);
-
 -- --------------------------------------------------------
 
 --
@@ -460,14 +431,6 @@ CREATE TABLE `tblmember` (
   `updated_by` varchar(20) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
---
--- Dumping data for table `tblmember`
---
-
-INSERT INTO `tblmember` (`ID`, `username`, `password`, `salt`, `t_status`, `cus_code`, `firstname`, `lastname`, `fullname`, `name_search`, `gender`, `birthdate`, `phone`, `email`, `address`, `avatar`, `t_index`, `last_login`, `created_date`, `created_by`, `updated_date`, `updated_by`) VALUES
-(1, 'minhnhat', '3a0dd49931123fdb96ab47e251f46399', '2u3U', 1, 'TMN-1', 'Minh Nhật', 'Tuyết', 'Tuyết Minh Nhật', 'tuyet minh nhat', 1, 689014800, '0909090909', 'minhnhat@redsun.vn', '159 Điện Biên Phủ, P. 15, Q. Bình Thạnh', '', 0, 0, 1708399940, 'admin', 1708414790, 'admin'),
-(2, 'nhungho', 'b06953d02a235fba4266aa979f60698a', 'F0zi', 3, 'HTAN-2', 'Ái Nhung', 'Hồ Thị', 'Hồ Thị Ái Nhung', 'ho thi Ai nhung', 2, 791744400, '0808080808', 'nhungho@redsun.vn', '159 Điện Biên Phủ, P. 15, Q. Bình Thạnh', '', 0, 0, 1708399976, 'admin', 1708404661, 'admin');
-
 -- --------------------------------------------------------
 
 --
@@ -492,14 +455,6 @@ CREATE TABLE `tblorder` (
   `lang` varchar(2) NOT NULL DEFAULT 'VN'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
---
--- Dumping data for table `tblorder`
---
-
-INSERT INTO `tblorder` (`ID`, `code`, `date`, `total`, `t_status`, `delivery_method`, `delivery_status`, `payment_method`, `payment_status`, `delivery_fee`, `note`, `updated_date`, `updated_by`, `t_index`, `lang`) VALUES
-(1, '1721375949_1', 1721375924, 3710000.00, 'pending', 6, 'not_yet_delivered', 1, 'unpaid', 0.00, '', 1721384355, '1', 1, 'vn'),
-(2, '1721376023_2', 1721375960, 2010000.00, 'pending', 6, 'not_yet_delivered', 1, 'unpaid', 15000.00, '', 1721381876, '1', 1, 'vn');
-
 -- --------------------------------------------------------
 
 --
@@ -515,14 +470,6 @@ CREATE TABLE `tblorder_buyer` (
   `email` varchar(50) NOT NULL,
   `address` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
-
---
--- Dumping data for table `tblorder_buyer`
---
-
-INSERT INTO `tblorder_buyer` (`ID`, `order_id`, `member_id`, `fullname`, `phone`, `email`, `address`) VALUES
-(1, 1, 0, 'Mr Snow', '0909090909', 'minhnhat@redsun.vn', '158 Điện Biên Phủ, Phường 15, Q. Bình Thạnh 1'),
-(2, 2, 0, 'Tuyet Minh Nhat', '0909090909', 'nganle@redsun.vn', 'Phạm Viết Chánh, Bình Thạnh 2');
 
 -- --------------------------------------------------------
 
@@ -543,22 +490,6 @@ CREATE TABLE `tblorder_detail` (
   `quantity` int(4) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
---
--- Dumping data for table `tblorder_detail`
---
-
-INSERT INTO `tblorder_detail` (`ID`, `order_id`, `product_id`, `product_price_id`, `color`, `size`, `product_name`, `price`, `reduced_price`, `quantity`) VALUES
-(1, 1, 1, 5, '', '4 hộp', 'Cà phê đông trùng hạ thảo, Combo 4 hộp', 360000.00, 350000.00, 1),
-(2, 2, 2, 3, 'Đỏ', '300ml', 'Nước hoa Pháp, Chai nhỏ', 1200000.00, 1000000.00, 1),
-(3, 2, 1, 2, '', '2 hộp', 'Cà phê đông trùng hạ thảo, Combo 2 hộp', 160000.00, 135000.00, 1),
-(4, 2, 3, 6, '', '', 'Cà phê Nấm linh chi', 75000.00, 75000.00, 3),
-(5, 2, 1, 5, '', '4 hộp', 'Cà phê đông trùng hạ thảo, Combo 4 hộp', 360000.00, 350000.00, 1),
-(6, 2, 3, 4, 'Đen', '2 hộp', 'Cà phê Nấm linh chi, Combo 2 hộp', 170000.00, 150000.00, 2),
-(7, 1, 1, 2, '', '2 hộp', 'Cà phê đông trùng hạ thảo, Combo 2 hộp', 160000.00, 135000.00, 1),
-(8, 1, 2, 3, 'Đỏ', '300ml', 'Nước hoa Pháp, Chai nhỏ', 1200000.00, 1000000.00, 3),
-(9, 1, 3, 4, 'Đen', '2 hộp', 'Cà phê Nấm linh chi, Combo 2 hộp', 170000.00, 150000.00, 1),
-(10, 1, 3, 6, '', '', 'Cà phê Nấm linh chi', 75000.00, 75000.00, 1);
-
 -- --------------------------------------------------------
 
 --
@@ -570,14 +501,6 @@ CREATE TABLE `tblorder_note` (
   `order_id` int(9) NOT NULL,
   `note` mediumtext NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
-
---
--- Dumping data for table `tblorder_note`
---
-
-INSERT INTO `tblorder_note` (`ID`, `order_id`, `note`) VALUES
-(1, 1, '&lt;div&gt;19/07/2024 | 17:19 - &lt;strong&gt;admin&lt;/strong&gt; : &lt;em&gt;(5) [ORDER] Email - Thông báo đã gói hàng&lt;/em&gt; - &lt;/div&gt;<div>19/07/2024 | 17:16 - <strong>admin</strong> : <em>(1) [ORDER] Email - Thông báo đơn hàng mới đặt cho người mua</em> - </div><div>19/07/2024 | 17:07 - <strong>admin</strong> : <em>(3) [ORDER] Email - Thông báo đã xác nhận đơn hàng</em> - </div><div>19/07/2024 | 17:00 - <strong>admin</strong> : <em>(1) [ORDER] Email - Thông báo đơn hàng mới đặt cho người mua</em> - </div><div>19/07/2024 | 16:59 - <strong>admin</strong> : <em>(1) [ORDER] Email - Thông báo đơn hàng mới đặt cho người mua</em> - </div><div>19/07/2024 | 16:53 - <strong>admin</strong> : <em>(1) [ORDER] Email - Thông báo đơn hàng mới đặt cho người mua</em> - </div><div>19/07/2024 | 14:59 - <strong>admin</strong> : Thêm mới thủ công</div>'),
-(2, 2, '&lt;div&gt;19/07/2024 | 16:37 - &lt;strong&gt;admin&lt;/strong&gt; : &lt;/div&gt;<div>19/07/2024 | 15:00 - <strong>admin</strong> : Thêm mới thủ công</div>');
 
 -- --------------------------------------------------------
 
@@ -594,14 +517,6 @@ CREATE TABLE `tblorder_receiver` (
   `email` varchar(50) NOT NULL,
   `address` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
-
---
--- Dumping data for table `tblorder_receiver`
---
-
-INSERT INTO `tblorder_receiver` (`ID`, `order_id`, `member_id`, `fullname`, `phone`, `email`, `address`) VALUES
-(1, 1, 0, 'Mr Snow', '0909090909', 'minhnhat@redsun.vn', '158 Điện Biên Phủ, Phường 15, Q. Bình Thạnh 1'),
-(2, 2, 0, 'Tuyet Minh Nhat', '0909090909', 'nganle@redsun.vn', 'Phạm Viết Chánh, Bình Thạnh 2');
 
 -- --------------------------------------------------------
 
@@ -662,15 +577,6 @@ CREATE TABLE `tblproduct` (
   `updated_by` int(9) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
---
--- Dumping data for table `tblproduct`
---
-
-INSERT INTO `tblproduct` (`ID`, `t_status`, `cateid`, `url`, `code`, `title`, `urlseo`, `title_search`, `imgURL`, `introduction`, `content`, `price`, `reduced_price`, `unit_id`, `brand_id`, `most_view`, `lang`, `t_index`, `publish_date`, `created_date`, `created_by`, `updated_date`, `updated_by`) VALUES
-(1, 1, 13, '', 'SPV1', 'Cà phê đông trùng hạ thảo', 'ca-phe-dong-trung-ha-thao', 'Ca phe dong trung ha thao', '', '', '', 75000.00, 75000.00, 6, 1, 0, 'vn', 1, 1692464400, 1692248592, 1, 1714644334, 1),
-(2, 1, 10, '', 'SPV2', 'Nước hoa Pháp', 'nuoc-hoa-phap', 'Nuoc hoa Phap', 'resources/upload/product/2/p3.png', '', '', 100000.00, 85000.00, 7, 0, 0, 'vn', 2, -28800, 1695187642, 1, 1714644355, 1),
-(3, 1, 13, '', 'SPV3', 'Cà phê Nấm linh chi', 'ca-phe-nam-linh-chi', 'Ca phe Nam linh chi', '', '', '', 80000.00, 60000.00, 6, 1, 0, 'vn', 3, 1711472400, 1711526533, 1, 1714644367, 1);
-
 -- --------------------------------------------------------
 
 --
@@ -685,23 +591,13 @@ CREATE TABLE `tblproduct_price` (
   `title` varchar(255) NOT NULL,
   `price` float(9,2) NOT NULL DEFAULT 0.00,
   `reduced_price` float(9,2) NOT NULL DEFAULT 0.00,
+  `imgURL` varchar(255) NOT NULL,
   `t_status` int(1) NOT NULL DEFAULT 1,
   `created_by` int(9) NOT NULL,
   `created_date` int(20) NOT NULL,
   `updated_by` int(9) NOT NULL,
   `updated_date` int(20) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
-
---
--- Dumping data for table `tblproduct_price`
---
-
-INSERT INTO `tblproduct_price` (`ID`, `product_id`, `color_id`, `size_id`, `title`, `price`, `reduced_price`, `t_status`, `created_by`, `created_date`, `updated_by`, `updated_date`) VALUES
-(2, 1, 0, 4, 'Combo 2 hộp', 160000.00, 135000.00, 1, 1, 1715323286, 1, 1717742102),
-(3, 2, 2, 2, 'Chai nhỏ', 1200000.00, 1000000.00, 1, 1, 1715323464, 1, 1717742064),
-(4, 3, 1, 4, 'Combo 2 hộp', 170000.00, 150000.00, 1, 1, 1715324228, 1, 1717742046),
-(5, 1, 0, 7, 'Combo 4 hộp', 360000.00, 350000.00, 1, 1, 1717744031, 1, 1717744063),
-(6, 3, 0, 0, '', 75000.00, 75000.00, 1, 1, 1717744889, 1, 1717744889);
 
 -- --------------------------------------------------------
 
@@ -723,26 +619,22 @@ CREATE TABLE `tblseo` (
 --
 
 INSERT INTO `tblseo` (`ID`, `nodeid`, `title`, `keywords`, `description`, `code_module`) VALUES
-(2, 10, 'Áo Phông', 'Áo phông, ao phong', '', 'RSCATEGORY'),
 (3, 5, 'Nội dung', 'nội dung, noi dung', '', 'RSCATEGORY'),
-(4, 8, 'Cà phê', 'cà phê, ca phe', '', 'RSCATEGORY'),
-(5, 10, 'Nước hoa Pháp', 'nước hoa pháp, nuoc hoa phap', '', 'RSCATEGORY'),
-(6, 1, 'Xem phim', 'xem phim, xem phim', 'intro content content', 'RSCMS'),
-(7, 9, 'Nước hoa', 'nước hoa, nuoc hoa', '', 'RSCATEGORY'),
-(8, 13, 'Laura Sunshine', 'laura sunshine, laura sunshine', '', 'RSCATEGORY'),
-(9, 14, 'Tin tức', 'tin tức, tin tuc', '', 'RSCATEGORY'),
-(10, 1, 'Cà phê đông trùng hạ thảo', 'cà phê đông trùng hạ thảo, ca phe dong trung ha thao', ' ', 'RSPRODUCT'),
-(17, 15, 'Video', 'video, video', '', 'RSCATEGORY'),
-(18, 2, 'Nước hoa Pháp', 'nước hoa pháp, nuoc hoa phap', ' ', 'RSPRODUCT'),
+(9, 14, 'Cẩm nang phụ nữ', 'cẩm nang phụ nữ, cam nang phu nu', '', 'RSCATEGORY'),
 (19, 16, 'Liên hệ', 'liên hệ, lien he', '', 'RSCATEGORY'),
-(20, 3, 'Cà phê Nấm linh chi', 'cà phê nấm linh chi, ca phe nam linh chi', ' ', 'RSPRODUCT'),
-(21, 2, 'Bài viết 1', 'bài viết 1, bai viet 1', ' ', 'RSCMS'),
-(22, 3, 'Tin tức 1', 'tin tức 1, tin tuc 1', ' ', 'RSCMS'),
-(23, 4, 'Tin tức 2', 'tin tức 2, tin tuc 2', ' ', 'RSCMS'),
-(24, 5, 'Tin tức 3', 'tin tức 3, tin tuc 3', ' ', 'RSCMS'),
-(25, 6, 'Tin tức 4', 'tin tức 4, tin tuc 4', ' ', 'RSCMS'),
-(26, 7, 'Tin tức 5', 'tin tức 5, tin tuc 5', ' ', 'RSCMS'),
-(27, 8, 'Tin tức 6', 'tin tức 6, tin tuc 6', ' ', 'RSCMS');
+(22, 17, 'Sản phẩm Pigina', 'sản phẩm pigina, san pham pigina', '', 'RSCATEGORY'),
+(23, 18, 'Câu hỏi thường gặp', 'câu hỏi thường gặp, cau hoi thuong gap', '', 'RSCATEGORY'),
+(24, 19, 'Chính sách', 'chính sách, chinh sach', '', 'RSCATEGORY'),
+(25, 20, 'Cam kết bán hàng', 'cam kết bán hàng, cam ket ban hang', '', 'RSCATEGORY'),
+(26, 21, 'Chính sách bảo mật', 'chính sách bảo mật, chinh sach bao mat', '', 'RSCATEGORY'),
+(27, 22, 'Chính sách vận chuyển', 'chính sách vận chuyển, chinh sach van chuyen', '', 'RSCATEGORY'),
+(28, 23, 'Chính sách thanh toán', 'chính sách thanh toán, chinh sach thanh toan', '', 'RSCATEGORY'),
+(29, 24, 'Đổi trả và hoàn tiền', 'Đổi trả và hoàn tiền, doi tra va hoan tien', '', 'RSCATEGORY'),
+(30, 25, 'Hướng dẫn', 'hướng dẫn, huong dan', '', 'RSCATEGORY'),
+(31, 26, 'Hướng dẫn mua hàng', 'hướng dẫn mua hàng, huong dan mua hang', '', 'RSCATEGORY'),
+(32, 27, 'Hướng dẫn đổi trả', 'hướng dẫn đổi trả, huong dan doi tra', '', 'RSCATEGORY'),
+(33, 28, 'Hướng dẫn chuyển khoản', 'hướng dẫn chuyển khoản, huong dan chuyen khoan', '', 'RSCATEGORY'),
+(34, 29, 'Hướng dẫn trả hoàn hàng', 'hướng dẫn trả hoàn hàng, huong dan tra hoan hang', '', 'RSCATEGORY');
 
 -- --------------------------------------------------------
 
@@ -760,18 +652,6 @@ CREATE TABLE `tblsize` (
   `updated_date` int(20) NOT NULL,
   `updated_by` int(9) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
-
---
--- Dumping data for table `tblsize`
---
-
-INSERT INTO `tblsize` (`ID`, `title_vn`, `title_en`, `t_status`, `created_date`, `created_by`, `updated_date`, `updated_by`) VALUES
-(2, '300ml', '300ml', 1, 1715313391, 1, 1716453849, 1),
-(3, '40x30', '40x30', 2, 1715313406, 1, 1715313406, 1),
-(4, '2 hộp', '2 box', 1, 1715323219, 1, 1715323219, 1),
-(5, 'Ngẫu nhiên', 'Ramdom', 1, 1715323250, 1, 1715323250, 1),
-(6, 'Size 41', 'Size 41', 1, 1716453706, 1, 1716453782, 1),
-(7, '4 hộp', '4 box', 1, 1717744049, 1, 1717744049, 1);
 
 -- --------------------------------------------------------
 
@@ -799,7 +679,7 @@ CREATE TABLE `tbltemplate` (
 --
 
 INSERT INTO `tbltemplate` (`ID`, `name`, `title`, `content`, `code`, `t_group`, `lang`, `t_status`, `mask`, `t_index`, `updated_date`, `updated_by`) VALUES
-(1, '[ORDER] Email - Thông báo đơn hàng mới đặt cho người mua', '[COMPANY_BRANDNAME] đã nhận Đơn hàng #[ORDER_CODE]', '&amp;lt;div style=&amp;quot;color:rgb(32,32,32);font-size:14px;&amp;quot;&amp;gt;&amp;lt;div style=&amp;quot;border-left:10px solid #f0f0f0;border-right:10px solid #f0f0f0;border-top:10px solid #f0f0f0;margin:auto;max-width:750px;&amp;quot;&amp;gt;&amp;lt;figure class=&amp;quot;table&amp;quot;&amp;gt;&amp;lt;table style=&amp;quot;max-width:750px;&amp;quot; border=&amp;quot;0&amp;quot; cellpadding=&amp;quot;0&amp;quot; cellspacing=&amp;quot;0&amp;quot; width=&amp;quot;100%&amp;quot;&amp;gt;&amp;lt;tbody&amp;gt;&amp;lt;tr&amp;gt;&amp;lt;td&amp;gt;&amp;lt;div style=&amp;quot;padding-top:30px;text-align:center;&amp;quot;&amp;gt;[COMPANY_LOGO]&amp;lt;/div&amp;gt;&amp;lt;/td&amp;gt;&amp;lt;/tr&amp;gt;&amp;lt;tr&amp;gt;&amp;lt;td&amp;gt;&amp;lt;div style=&amp;quot;border-bottom:10px solid #f0f0f0;padding:30px;&amp;quot;&amp;gt;&amp;lt;div style=&amp;quot;color:#0f146d;font-size:23px;padding:0 15px 30px;text-align:center;&amp;quot;&amp;gt;Cám ơn bạn đã đặt hàng tại [COMPANY_BRANDNAME]!&amp;lt;/div&amp;gt;&amp;lt;h3 style=&amp;quot;margin-top:0;&amp;quot;&amp;gt;Xin chào [BUYER_NAME],&amp;lt;/h3&amp;gt;&amp;lt;p&amp;gt;[BRAND_NAME] đã nhận được yêu cầu đặt hàng của bạn và đang xử lý nhé. Bạn sẽ nhận được thông báo tiếp theo khi đơn hàng đã sẵn sàng được giao.&amp;lt;/p&amp;gt;&amp;lt;p&amp;gt;&amp;lt;strong&amp;gt;*Lưu ý nhỏ cho bạn:&amp;lt;/strong&amp;gt; Bạn chỉ nên nhận hàng khi trạng thái đơn hàng là “&amp;lt;strong&amp;gt;Đang giao hàng&amp;lt;/strong&amp;gt;” và nhớ kiểm tra Mã đơn hàng, Thông tin người gửi và Mã vận đơn để nhận đúng kiện hàng nhé.&amp;lt;/p&amp;gt;&amp;lt;/div&amp;gt;&amp;lt;/td&amp;gt;&amp;lt;/tr&amp;gt;&amp;lt;tr&amp;gt;&amp;lt;td&amp;gt;&amp;lt;div style=&amp;quot;border-bottom:10px solid #f0f0f0;padding:30px;&amp;quot;&amp;gt;&amp;lt;h3 style=&amp;quot;margin-top:0;&amp;quot;&amp;gt;&amp;lt;strong&amp;gt;Sản phẩm&amp;lt;/strong&amp;gt;&amp;lt;/h3&amp;gt;&amp;lt;p&amp;gt;[PRODUCT_LIST]&amp;lt;/p&amp;gt;&amp;lt;/div&amp;gt;&amp;lt;/td&amp;gt;&amp;lt;/tr&amp;gt;&amp;lt;tr&amp;gt;&amp;lt;td&amp;gt;&amp;lt;div style=&amp;quot;border-bottom:10px solid #f0f0f0;padding:30px;&amp;quot;&amp;gt;&amp;lt;figure class=&amp;quot;table&amp;quot;&amp;gt;&amp;lt;table style=&amp;quot;margin-bottom:15px;&amp;quot; cellpadding=&amp;quot;8&amp;quot; width=&amp;quot;100%&amp;quot;&amp;gt;&amp;lt;tbody&amp;gt;&amp;lt;tr&amp;gt;&amp;lt;td&amp;gt;&amp;lt;strong&amp;gt;Tổng số lượng:&amp;lt;/strong&amp;gt;&amp;lt;/td&amp;gt;&amp;lt;td style=&amp;quot;text-align:center;&amp;quot;&amp;gt;&amp;amp;nbsp;&amp;lt;/td&amp;gt;&amp;lt;td style=&amp;quot;text-align:right;&amp;quot;&amp;gt;&amp;lt;strong&amp;gt;[TOTAL_QUANTITY]&amp;lt;/strong&amp;gt;&amp;lt;/td&amp;gt;&amp;lt;/tr&amp;gt;&amp;lt;tr&amp;gt;&amp;lt;td&amp;gt;&amp;lt;strong&amp;gt;Tổng thành tiền:&amp;lt;/strong&amp;gt;&amp;lt;/td&amp;gt;&amp;lt;td style=&amp;quot;text-align:center;&amp;quot;&amp;gt;VND&amp;lt;/td&amp;gt;&amp;lt;td style=&amp;quot;text-align:right;&amp;quot;&amp;gt;&amp;lt;strong&amp;gt;[TOTAL_AMOUNT]&amp;lt;/strong&amp;gt;&amp;lt;/td&amp;gt;&amp;lt;/tr&amp;gt;&amp;lt;tr&amp;gt;&amp;lt;td&amp;gt;&amp;lt;strong&amp;gt;Phí vận chuyển:&amp;lt;/strong&amp;gt;&amp;lt;/td&amp;gt;&amp;lt;td style=&amp;quot;text-align:center;&amp;quot;&amp;gt;VND&amp;lt;/td&amp;gt;&amp;lt;td style=&amp;quot;text-align:right;&amp;quot;&amp;gt;[DELIVERY_FEE]&amp;lt;/td&amp;gt;&amp;lt;/tr&amp;gt;&amp;lt;tr&amp;gt;&amp;lt;td&amp;gt;&amp;lt;span style=&amp;quot;color:#f27c24;&amp;quot;&amp;gt;&amp;lt;strong&amp;gt;Tổng cộng:&amp;lt;/strong&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;/td&amp;gt;&amp;lt;td style=&amp;quot;text-align:center;&amp;quot;&amp;gt;&amp;lt;span style=&amp;quot;color:#f27c24;&amp;quot;&amp;gt;&amp;lt;strong&amp;gt;VND&amp;lt;/strong&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;/td&amp;gt;&amp;lt;td style=&amp;quot;text-align:right;&amp;quot;&amp;gt;&amp;lt;span style=&amp;quot;color:#f27c24;&amp;quot;&amp;gt;&amp;lt;strong&amp;gt;[TOTAL_ORDER]&amp;lt;/strong&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;/td&amp;gt;&amp;lt;/tr&amp;gt;&amp;lt;/tbody&amp;gt;&amp;lt;/table&amp;gt;&amp;lt;/figure&amp;gt;&amp;lt;div style=&amp;quot;border-bottom:1px solid #f0f0f0;height:0;margin-bottom:15px;&amp;quot;&amp;gt;&amp;amp;nbsp;&amp;lt;/div&amp;gt;&amp;lt;figure class=&amp;quot;table&amp;quot;&amp;gt;&amp;lt;table cellpadding=&amp;quot;8&amp;quot; width=&amp;quot;100%&amp;quot;&amp;gt;&amp;lt;tbody&amp;gt;&amp;lt;tr&amp;gt;&amp;lt;td&amp;gt;Trạng thái đơn hàng:&amp;lt;/td&amp;gt;&amp;lt;td style=&amp;quot;text-align:right;&amp;quot;&amp;gt;[ORDER_STATUS]&amp;lt;/td&amp;gt;&amp;lt;/tr&amp;gt;&amp;lt;tr&amp;gt;&amp;lt;td&amp;gt;Phương thức thanh toán:&amp;lt;/td&amp;gt;&amp;lt;td style=&amp;quot;text-align:right;&amp;quot;&amp;gt;[ORDER_PAYMENT_METHOD]&amp;lt;/td&amp;gt;&amp;lt;/tr&amp;gt;&amp;lt;tr&amp;gt;&amp;lt;td&amp;gt;Trạng thái thanh toán:&amp;lt;/td&amp;gt;&amp;lt;td style=&amp;quot;text-align:right;&amp;quot;&amp;gt;[ORDER_PAYMENT_STATUS]&amp;lt;/td&amp;gt;&amp;lt;/tr&amp;gt;&amp;lt;tr&amp;gt;&amp;lt;td&amp;gt;Tùy chọn giao hàng:&amp;lt;/td&amp;gt;&amp;lt;td style=&amp;quot;text-align:right;&amp;quot;&amp;gt;[ORDER_DELIVERY_METHOD]&amp;lt;/td&amp;gt;&amp;lt;/tr&amp;gt;&amp;lt;tr&amp;gt;&amp;lt;td&amp;gt;Trạng thái giao hàng:&amp;lt;/td&amp;gt;&amp;lt;td style=&amp;quot;text-align:right;&amp;quot;&amp;gt;[ORDER_DELIVERY_STATUS]&amp;lt;/td&amp;gt;&amp;lt;/tr&amp;gt;&amp;lt;/tbody&amp;gt;&amp;lt;/table&amp;gt;&amp;lt;/figure&amp;gt;&amp;lt;/div&amp;gt;&amp;lt;/td&amp;gt;&amp;lt;/tr&amp;gt;&amp;lt;tr&amp;gt;&amp;lt;td&amp;gt;&amp;lt;div style=&amp;quot;border-bottom:10px solid #f0f0f0;padding:30px;&amp;quot;&amp;gt;&amp;lt;h3 style=&amp;quot;margin-top:0;&amp;quot;&amp;gt;&amp;lt;strong&amp;gt;Ngày đặt hàng:&amp;lt;/strong&amp;gt; [ORDER_DATE]&amp;lt;/h3&amp;gt;&amp;lt;h3 style=&amp;quot;margin-top:0;&amp;quot;&amp;gt;&amp;lt;strong&amp;gt;Ghi chú đơn hàng:&amp;lt;/strong&amp;gt;&amp;lt;/h3&amp;gt;&amp;lt;div&amp;gt;[ORDER_NOTE]&amp;lt;/div&amp;gt;&amp;lt;/div&amp;gt;&amp;lt;/td&amp;gt;&amp;lt;/tr&amp;gt;&amp;lt;tr&amp;gt;&amp;lt;td&amp;gt;&amp;lt;div style=&amp;quot;border-bottom:10px solid #f0f0f0;padding:30px;&amp;quot;&amp;gt;&amp;lt;h3 style=&amp;quot;margin-top:0;&amp;quot;&amp;gt;&amp;lt;strong&amp;gt;Thông tin người mua&amp;lt;/strong&amp;gt;&amp;lt;/h3&amp;gt;&amp;lt;figure class=&amp;quot;table&amp;quot;&amp;gt;&amp;lt;table width=&amp;quot;100%&amp;quot;&amp;gt;&amp;lt;tbody&amp;gt;&amp;lt;tr&amp;gt;&amp;lt;td&amp;gt;Tên người mua:&amp;lt;/td&amp;gt;&amp;lt;td style=&amp;quot;text-align:right;&amp;quot;&amp;gt;[BUYER_NAME]&amp;lt;/td&amp;gt;&amp;lt;/tr&amp;gt;&amp;lt;tr&amp;gt;&amp;lt;td&amp;gt;Số điện thoại:&amp;lt;/td&amp;gt;&amp;lt;td style=&amp;quot;text-align:right;&amp;quot;&amp;gt;[BUYER_PHONE]&amp;lt;/td&amp;gt;&amp;lt;/tr&amp;gt;&amp;lt;tr&amp;gt;&amp;lt;td&amp;gt;Email:&amp;lt;/td&amp;gt;&amp;lt;td style=&amp;quot;text-align:right;&amp;quot;&amp;gt;[BUYER_EMAIL]&amp;lt;/td&amp;gt;&amp;lt;/tr&amp;gt;&amp;lt;tr&amp;gt;&amp;lt;td&amp;gt;Địa chỉ:&amp;lt;/td&amp;gt;&amp;lt;td style=&amp;quot;text-align:right;&amp;quot;&amp;gt;[BUYER_ADDRESS]&amp;lt;/td&amp;gt;&amp;lt;/tr&amp;gt;&amp;lt;/tbody&amp;gt;&amp;lt;/table&amp;gt;&amp;lt;/figure&amp;gt;&amp;lt;/div&amp;gt;&amp;lt;/td&amp;gt;&amp;lt;/tr&amp;gt;&amp;lt;tr&amp;gt;&amp;lt;td&amp;gt;&amp;lt;div style=&amp;quot;border-bottom:10px solid #f0f0f0;padding:30px;&amp;quot;&amp;gt;&amp;lt;h3 style=&amp;quot;margin-top:0;&amp;quot;&amp;gt;&amp;lt;strong&amp;gt;Thông tin người nhận&amp;lt;/strong&amp;gt;&amp;lt;/h3&amp;gt;&amp;lt;figure class=&amp;quot;table&amp;quot;&amp;gt;&amp;lt;table width=&amp;quot;100%&amp;quot;&amp;gt;&amp;lt;tbody&amp;gt;&amp;lt;tr&amp;gt;&amp;lt;td&amp;gt;Tên người nhận:&amp;lt;/td&amp;gt;&amp;lt;td style=&amp;quot;text-align:right;&amp;quot;&amp;gt;[RECEIVER_NAME]&amp;lt;/td&amp;gt;&amp;lt;/tr&amp;gt;&amp;lt;tr&amp;gt;&amp;lt;td&amp;gt;Số điện thoại:&amp;lt;/td&amp;gt;&amp;lt;td style=&amp;quot;text-align:right;&amp;quot;&amp;gt;[RECEIVER_PHONE]&amp;lt;/td&amp;gt;&amp;lt;/tr&amp;gt;&amp;lt;tr&amp;gt;&amp;lt;td&amp;gt;Email:&amp;lt;/td&amp;gt;&amp;lt;td style=&amp;quot;text-align:right;&amp;quot;&amp;gt;[RECEIVER_EMAIL]&amp;lt;/td&amp;gt;&amp;lt;/tr&amp;gt;&amp;lt;tr&amp;gt;&amp;lt;td&amp;gt;Địa chỉ:&amp;lt;/td&amp;gt;&amp;lt;td style=&amp;quot;text-align:right;&amp;quot;&amp;gt;[RECEIVER_ADDRESS]&amp;lt;/td&amp;gt;&amp;lt;/tr&amp;gt;&amp;lt;/tbody&amp;gt;&amp;lt;/table&amp;gt;&amp;lt;/figure&amp;gt;&amp;lt;/div&amp;gt;&amp;lt;/td&amp;gt;&amp;lt;/tr&amp;gt;&amp;lt;tr&amp;gt;&amp;lt;td&amp;gt;&amp;lt;div style=&amp;quot;border-bottom:10px solid #f0f0f0;padding:30px;&amp;quot;&amp;gt;&amp;lt;h3 style=&amp;quot;margin-top:0;&amp;quot;&amp;gt;&amp;lt;strong&amp;gt;Có phải bạn thắc mắc?&amp;lt;/strong&amp;gt;&amp;lt;/h3&amp;gt;&amp;lt;p&amp;gt;Liên hệ hotline [COMPANY_HOTLINE] của chúng tôi hoặc gửi email đến hòm thư [COMPANY_EMAIL] (8-21h both T7, CN), đội ngũ [COMPANY_BRANDNAME] sẽ hỗ trợ bạn bất cứ lúc nào.&amp;lt;/p&amp;gt;&amp;lt;p&amp;gt;[COMPANY_BRANDNAME] một lần nữa cảm ơn bạn.&amp;lt;/p&amp;gt;&amp;lt;/div&amp;gt;&amp;lt;/td&amp;gt;&amp;lt;/tr&amp;gt;&amp;lt;/tbody&amp;gt;&amp;lt;/table&amp;gt;&amp;lt;/figure&amp;gt;&amp;lt;/div&amp;gt;&amp;lt;/div&amp;gt;', 'order_info', 'email', 'vn', 1, 'order_email', 1, 1712112780, 1),
+(1, '[ORDER] Email - Thông báo đơn hàng mới đặt cho người mua', '[COMPANY_BRANDNAME] đã nhận Đơn hàng #[ORDER_CODE]', '&amp;lt;div style=&amp;quot;color:rgb(32,32,32);font-size:14px;&amp;quot;&amp;gt;&amp;lt;div style=&amp;quot;border-left:10px solid #f0f0f0;border-right:10px solid #f0f0f0;border-top:10px solid #f0f0f0;margin:auto;max-width:750px;&amp;quot;&amp;gt;&amp;lt;figure class=&amp;quot;table&amp;quot;&amp;gt;&amp;lt;table style=&amp;quot;max-width:750px;&amp;quot; border=&amp;quot;0&amp;quot; cellpadding=&amp;quot;0&amp;quot; cellspacing=&amp;quot;0&amp;quot; width=&amp;quot;100%&amp;quot;&amp;gt;&amp;lt;tbody&amp;gt;&amp;lt;tr&amp;gt;&amp;lt;td&amp;gt;&amp;lt;div style=&amp;quot;padding-top:30px;text-align:center;&amp;quot;&amp;gt;[COMPANY_LOGO]&amp;lt;/div&amp;gt;&amp;lt;/td&amp;gt;&amp;lt;/tr&amp;gt;&amp;lt;tr&amp;gt;&amp;lt;td&amp;gt;&amp;lt;div style=&amp;quot;border-bottom:10px solid #f0f0f0;padding:30px;&amp;quot;&amp;gt;&amp;lt;div style=&amp;quot;color:#0f146d;font-size:23px;padding:0 15px 30px;text-align:center;&amp;quot;&amp;gt;Cám ơn bạn đã đặt hàng tại [COMPANY_BRANDNAME]!&amp;lt;/div&amp;gt;&amp;lt;h3 style=&amp;quot;margin-top:0;&amp;quot;&amp;gt;Xin chào [BUYER_NAME],&amp;lt;/h3&amp;gt;&amp;lt;p&amp;gt;[BRAND_NAME] đã nhận được yêu cầu đặt hàng của bạn và đang xử lý nhé. Bạn sẽ nhận được thông báo tiếp theo khi đơn hàng đã sẵn sàng được giao.&amp;lt;/p&amp;gt;&amp;lt;p&amp;gt;&amp;lt;strong&amp;gt;*Lưu ý nhỏ cho bạn:&amp;lt;/strong&amp;gt; Bạn chỉ nên nhận hàng khi trạng thái đơn hàng là “&amp;lt;strong&amp;gt;Đang giao hàng&amp;lt;/strong&amp;gt;” và nhớ kiểm tra Mã đơn hàng, Thông tin người gửi và Mã vận đơn để nhận đúng kiện hàng nhé.&amp;lt;/p&amp;gt;&amp;lt;/div&amp;gt;&amp;lt;/td&amp;gt;&amp;lt;/tr&amp;gt;&amp;lt;tr&amp;gt;&amp;lt;td&amp;gt;&amp;lt;div style=&amp;quot;border-bottom:10px solid #f0f0f0;padding:30px;&amp;quot;&amp;gt;&amp;lt;h3 style=&amp;quot;margin-top:0;&amp;quot;&amp;gt;&amp;lt;strong&amp;gt;Sản phẩm&amp;lt;/strong&amp;gt;&amp;lt;/h3&amp;gt;&amp;lt;p&amp;gt;[PRODUCT_LIST]&amp;lt;/p&amp;gt;&amp;lt;/div&amp;gt;&amp;lt;/td&amp;gt;&amp;lt;/tr&amp;gt;&amp;lt;tr&amp;gt;&amp;lt;td&amp;gt;&amp;lt;div style=&amp;quot;border-bottom:10px solid #f0f0f0;padding:30px;&amp;quot;&amp;gt;&amp;lt;figure class=&amp;quot;table&amp;quot;&amp;gt;&amp;lt;table style=&amp;quot;margin-bottom:15px;&amp;quot; cellpadding=&amp;quot;8&amp;quot; width=&amp;quot;100%&amp;quot;&amp;gt;&amp;lt;tbody&amp;gt;&amp;lt;tr&amp;gt;&amp;lt;td&amp;gt;&amp;lt;strong&amp;gt;Tổng số lượng:&amp;lt;/strong&amp;gt;&amp;lt;/td&amp;gt;&amp;lt;td style=&amp;quot;text-align:center;&amp;quot;&amp;gt;&amp;amp;nbsp;&amp;lt;/td&amp;gt;&amp;lt;td style=&amp;quot;text-align:right;&amp;quot;&amp;gt;&amp;lt;strong&amp;gt;[TOTAL_QUANTITY]&amp;lt;/strong&amp;gt;&amp;lt;/td&amp;gt;&amp;lt;/tr&amp;gt;&amp;lt;tr&amp;gt;&amp;lt;td&amp;gt;&amp;lt;strong&amp;gt;Tổng thành tiền:&amp;lt;/strong&amp;gt;&amp;lt;/td&amp;gt;&amp;lt;td style=&amp;quot;text-align:center;&amp;quot;&amp;gt;VND&amp;lt;/td&amp;gt;&amp;lt;td style=&amp;quot;text-align:right;&amp;quot;&amp;gt;&amp;lt;strong&amp;gt;[TOTAL_AMOUNT]&amp;lt;/strong&amp;gt;&amp;lt;/td&amp;gt;&amp;lt;/tr&amp;gt;&amp;lt;tr&amp;gt;&amp;lt;td&amp;gt;&amp;lt;strong&amp;gt;Phí vận chuyển:&amp;lt;/strong&amp;gt;&amp;lt;/td&amp;gt;&amp;lt;td style=&amp;quot;text-align:center;&amp;quot;&amp;gt;VND&amp;lt;/td&amp;gt;&amp;lt;td style=&amp;quot;text-align:right;&amp;quot;&amp;gt;[DELIVERY_FEE]&amp;lt;/td&amp;gt;&amp;lt;/tr&amp;gt;&amp;lt;tr&amp;gt;&amp;lt;td&amp;gt;&amp;lt;span style=&amp;quot;color:#f27c24;&amp;quot;&amp;gt;&amp;lt;strong&amp;gt;Tổng cộng:&amp;lt;/strong&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;/td&amp;gt;&amp;lt;td style=&amp;quot;text-align:center;&amp;quot;&amp;gt;&amp;lt;span style=&amp;quot;color:#f27c24;&amp;quot;&amp;gt;&amp;lt;strong&amp;gt;VND&amp;lt;/strong&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;/td&amp;gt;&amp;lt;td style=&amp;quot;text-align:right;&amp;quot;&amp;gt;&amp;lt;span style=&amp;quot;color:#f27c24;&amp;quot;&amp;gt;&amp;lt;strong&amp;gt;[TOTAL_ORDER]&amp;lt;/strong&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;/td&amp;gt;&amp;lt;/tr&amp;gt;&amp;lt;/tbody&amp;gt;&amp;lt;/table&amp;gt;&amp;lt;/figure&amp;gt;&amp;lt;div style=&amp;quot;border-bottom:1px solid #f0f0f0;height:0;margin-bottom:15px;&amp;quot;&amp;gt;&amp;amp;nbsp;&amp;lt;/div&amp;gt;&amp;lt;figure class=&amp;quot;table&amp;quot;&amp;gt;&amp;lt;table cellpadding=&amp;quot;8&amp;quot; width=&amp;quot;100%&amp;quot;&amp;gt;&amp;lt;tbody&amp;gt;&amp;lt;tr&amp;gt;&amp;lt;td&amp;gt;Trạng thái đơn hàng:&amp;lt;/td&amp;gt;&amp;lt;td style=&amp;quot;text-align:right;&amp;quot;&amp;gt;[ORDER_STATUS]&amp;lt;/td&amp;gt;&amp;lt;/tr&amp;gt;&amp;lt;tr&amp;gt;&amp;lt;td&amp;gt;Phương thức thanh toán:&amp;lt;/td&amp;gt;&amp;lt;td style=&amp;quot;text-align:right;&amp;quot;&amp;gt;[ORDER_PAYMENT_METHOD]&amp;lt;/td&amp;gt;&amp;lt;/tr&amp;gt;&amp;lt;tr&amp;gt;&amp;lt;td&amp;gt;Trạng thái thanh toán:&amp;lt;/td&amp;gt;&amp;lt;td style=&amp;quot;text-align:right;&amp;quot;&amp;gt;[ORDER_PAYMENT_STATUS]&amp;lt;/td&amp;gt;&amp;lt;/tr&amp;gt;&amp;lt;tr&amp;gt;&amp;lt;td&amp;gt;Tùy chọn giao hàng:&amp;lt;/td&amp;gt;&amp;lt;td style=&amp;quot;text-align:right;&amp;quot;&amp;gt;[ORDER_DELIVERY_METHOD]&amp;lt;/td&amp;gt;&amp;lt;/tr&amp;gt;&amp;lt;tr&amp;gt;&amp;lt;td&amp;gt;Trạng thái giao hàng:&amp;lt;/td&amp;gt;&amp;lt;td style=&amp;quot;text-align:right;&amp;quot;&amp;gt;[ORDER_DELIVERY_STATUS]&amp;lt;/td&amp;gt;&amp;lt;/tr&amp;gt;&amp;lt;/tbody&amp;gt;&amp;lt;/table&amp;gt;&amp;lt;/figure&amp;gt;&amp;lt;/div&amp;gt;&amp;lt;/td&amp;gt;&amp;lt;/tr&amp;gt;&amp;lt;tr&amp;gt;&amp;lt;td&amp;gt;&amp;lt;div style=&amp;quot;border-bottom:10px solid #f0f0f0;padding:30px;&amp;quot;&amp;gt;&amp;lt;h3 style=&amp;quot;margin-top:0;&amp;quot;&amp;gt;&amp;lt;strong&amp;gt;Ngày đặt hàng:&amp;lt;/strong&amp;gt; [ORDER_DATE]&amp;lt;/h3&amp;gt;&amp;lt;h3 style=&amp;quot;margin-top:0;&amp;quot;&amp;gt;&amp;lt;strong&amp;gt;Ghi chú đơn hàng:&amp;lt;/strong&amp;gt;&amp;lt;/h3&amp;gt;&amp;lt;div&amp;gt;[ORDER_NOTE]&amp;lt;/div&amp;gt;&amp;lt;/div&amp;gt;&amp;lt;/td&amp;gt;&amp;lt;/tr&amp;gt;&amp;lt;tr&amp;gt;&amp;lt;td&amp;gt;&amp;lt;div style=&amp;quot;border-bottom:10px solid #f0f0f0;padding:30px;&amp;quot;&amp;gt;&amp;lt;h3 style=&amp;quot;margin-top:0;&amp;quot;&amp;gt;&amp;lt;strong&amp;gt;Thông tin người mua&amp;lt;/strong&amp;gt;&amp;lt;/h3&amp;gt;&amp;lt;figure class=&amp;quot;table&amp;quot;&amp;gt;&amp;lt;table width=&amp;quot;100%&amp;quot;&amp;gt;&amp;lt;tbody&amp;gt;&amp;lt;tr&amp;gt;&amp;lt;td&amp;gt;Tên người mua:&amp;lt;/td&amp;gt;&amp;lt;td style=&amp;quot;text-align:right;&amp;quot;&amp;gt;[BUYER_NAME]&amp;lt;/td&amp;gt;&amp;lt;/tr&amp;gt;&amp;lt;tr&amp;gt;&amp;lt;td&amp;gt;Số điện thoại:&amp;lt;/td&amp;gt;&amp;lt;td style=&amp;quot;text-align:right;&amp;quot;&amp;gt;[BUYER_PHONE]&amp;lt;/td&amp;gt;&amp;lt;/tr&amp;gt;&amp;lt;tr&amp;gt;&amp;lt;td&amp;gt;Email:&amp;lt;/td&amp;gt;&amp;lt;td style=&amp;quot;text-align:right;&amp;quot;&amp;gt;[BUYER_EMAIL]&amp;lt;/td&amp;gt;&amp;lt;/tr&amp;gt;&amp;lt;tr&amp;gt;&amp;lt;td&amp;gt;Địa chỉ:&amp;lt;/td&amp;gt;&amp;lt;td style=&amp;quot;text-align:right;&amp;quot;&amp;gt;[BUYER_ADDRESS]&amp;lt;/td&amp;gt;&amp;lt;/tr&amp;gt;&amp;lt;/tbody&amp;gt;&amp;lt;/table&amp;gt;&amp;lt;/figure&amp;gt;&amp;lt;/div&amp;gt;&amp;lt;/td&amp;gt;&amp;lt;/tr&amp;gt;&amp;lt;tr&amp;gt;&amp;lt;td&amp;gt;&amp;lt;div style=&amp;quot;border-bottom:10px solid #f0f0f0;padding:30px;&amp;quot;&amp;gt;&amp;lt;h3 style=&amp;quot;margin-top:0;&amp;quot;&amp;gt;&amp;lt;strong&amp;gt;Thông tin người nhận&amp;lt;/strong&amp;gt;&amp;lt;/h3&amp;gt;&amp;lt;figure class=&amp;quot;table&amp;quot;&amp;gt;&amp;lt;table width=&amp;quot;100%&amp;quot;&amp;gt;&amp;lt;tbody&amp;gt;&amp;lt;tr&amp;gt;&amp;lt;td&amp;gt;Tên người nhận:&amp;lt;/td&amp;gt;&amp;lt;td style=&amp;quot;text-align:right;&amp;quot;&amp;gt;[RECEIVER_NAME]&amp;lt;/td&amp;gt;&amp;lt;/tr&amp;gt;&amp;lt;tr&amp;gt;&amp;lt;td&amp;gt;Số điện thoại:&amp;lt;/td&amp;gt;&amp;lt;td style=&amp;quot;text-align:right;&amp;quot;&amp;gt;[RECEIVER_PHONE]&amp;lt;/td&amp;gt;&amp;lt;/tr&amp;gt;&amp;lt;tr&amp;gt;&amp;lt;td&amp;gt;Email:&amp;lt;/td&amp;gt;&amp;lt;td style=&amp;quot;text-align:right;&amp;quot;&amp;gt;[RECEIVER_EMAIL]&amp;lt;/td&amp;gt;&amp;lt;/tr&amp;gt;&amp;lt;tr&amp;gt;&amp;lt;td&amp;gt;Địa chỉ:&amp;lt;/td&amp;gt;&amp;lt;td style=&amp;quot;text-align:right;&amp;quot;&amp;gt;[RECEIVER_ADDRESS]&amp;lt;/td&amp;gt;&amp;lt;/tr&amp;gt;&amp;lt;/tbody&amp;gt;&amp;lt;/table&amp;gt;&amp;lt;/figure&amp;gt;&amp;lt;/div&amp;gt;&amp;lt;/td&amp;gt;&amp;lt;/tr&amp;gt;&amp;lt;tr&amp;gt;&amp;lt;td&amp;gt;&amp;lt;div style=&amp;quot;border-bottom:10px solid #f0f0f0;padding:30px;&amp;quot;&amp;gt;&amp;lt;h3 style=&amp;quot;margin-top:0;&amp;quot;&amp;gt;&amp;lt;strong&amp;gt;Có phải bạn thắc mắc?&amp;lt;/strong&amp;gt;&amp;lt;/h3&amp;gt;&amp;lt;p&amp;gt;Liên hệ hotline [COMPANY_HOTLINE] của chúng tôi hoặc gửi email đến hòm thư [COMPANY_EMAIL] (8-21h both T7, CN), đội ngũ [COMPANY_BRANDNAME] sẽ hỗ trợ bạn bất cứ lúc nào.&amp;lt;/p&amp;gt;&amp;lt;p&amp;gt;[COMPANY_BRANDNAME] một lần nữa cảm ơn bạn.&amp;lt;/p&amp;gt;&amp;lt;/div&amp;gt;&amp;lt;/td&amp;gt;&amp;lt;/tr&amp;gt;&amp;lt;/tbody&amp;gt;&amp;lt;/table&amp;gt;&amp;lt;/figure&amp;gt;&amp;lt;/div&amp;gt;&amp;lt;/div&amp;gt;', 'order_info', 'email', 'vn', 1, 'order_email', 1, 1731591001, 1),
 (2, '[ORDER] Email - Thông báo đơn hàng mới đặt cho người mua', '[COMPANY_BRANDNAME] Order Received #[ORDER_CODE]', '<div style=\"color:rgb(32,32,32);font-size:14px;\">\n<div style=\"max-width: 750px;margin: auto;border-top: 10px solid #f0f0f0;border-left: 10px solid #f0f0f0;border-right: 10px solid #f0f0f0;\">\n<table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" style=\"max-width:750px\" width=\"100%\">\n	<tbody>\n		<tr>\n			<td>\n			<div style=\"text-align:center; padding-top: 30px;\">[COMPANY_LOGO]</div>\n			</td>\n		</tr>\n		<tr>\n			<td>\n			<div style=\"border-bottom: 10px solid #f0f0f0;padding: 30px;\">\n			<div style=\"text-align:center;color: #0f146d;padding: 0 15px 30px 15px;font-size: 23px;\">Thank you for ordering at [COMPANY_BRANDNAME]!</div>\n\n			<h3 style=\"margin-top: 0;\">Hello [BUYER_NAME],</h3>\n\n			<p>Your order has been received and is being processed. We will notify you when the parcel is ready.</p>\n\n			<p>Please only agree to receive the package if the order&rsquo;s status has been updated to &quot;Out for Delivery&quot;. Don&rsquo;t forget to double check your Order number, Sender information and Tracking number to ensure you receive the right package.</p>\n			</div>\n			</td>\n		</tr>\n		<tr>\n			<td>\n			<div style=\"border-bottom: 10px solid #f0f0f0;padding: 30px;\">\n			<h3 style=\"margin-top: 0;\"><b>Products</b></h3>\n			[PRODUCT_LIST]</div>\n			</td>\n		</tr>\n		<tr>\n			<td>\n			<div style=\"border-bottom: 10px solid #f0f0f0;padding: 30px;\">\n			<table cellpadding=\"8\" style=\"margin-bottom: 15px;\" width=\"100%\">\n				<tbody>\n					<tr>\n						<td><b>Total quantity:</b></td>\n						<td align=\"center\">&nbsp;</td>\n						<td align=\"right\"><b>[TOTAL_QUANTITY]</b></td>\n					</tr>\n					<tr>\n						<td><b>Total amount:</b></td>\n						<td align=\"center\">VND</td>\n						<td align=\"right\"><b>[TOTAL_AMOUNT]</b></td>\n					</tr>\n					<tr>\n						<td><b>Delivery fee:</b></td>\n						<td align=\"center\">VND</td>\n						<td align=\"right\">[DELIVERY_FEE]</td>\n					</tr>\n					<tr>\n						<td><span style=\"color: #f27c24;\"><b>Total:</b></span></td>\n						<td align=\"center\"><span style=\"color: #f27c24;\"><b>VND</b></span></td>\n						<td align=\"right\"><span style=\"color: #f27c24;\"><b>[TOTAL_ORDER]</b></span></td>\n					</tr>\n				</tbody>\n			</table>\n\n			<div style=\"margin-bottom: 15px;border-bottom:1px solid #f0f0f0;height:0\">&nbsp;</div>\n\n			<table cellpadding=\"8\" width=\"100%\">\n				<tbody>\n					<tr>\n						<td>Order status:</td>\n						<td align=\"right\">[ORDER_STATUS]</td>\n					</tr>\n					<tr>\n						<td>Payment method:</td>\n						<td align=\"right\">[ORDER_PAYMENT_METHOD]</td>\n					</tr>\n					<tr>\n						<td>Payment status:</td>\n						<td align=\"right\">[ORDER_PAYMENT_STATUS]</td>\n					</tr>\n					<tr>\n						<td>Delivery method:</td>\n						<td align=\"right\">[ORDER_DELIVERY_METHOD]</td>\n					</tr>\n					<tr>\n						<td>Delivery status:</td>\n						<td align=\"right\">[ORDER_DELIVERY_STATUS]</td>\n					</tr>\n				</tbody>\n			</table>\n			</div>\n			</td>\n		</tr>\n		<tr>\n			<td>\n			<div style=\"border-bottom: 10px solid #f0f0f0;padding: 30px;\">\n			<h3 style=\"margin-top: 0;\"><b>Order date:</b> [ORDER_DATE]</h3>\n\n			<h3 style=\"margin-top: 0;\"><b>Order notes:</b></h3>\n\n			<div>[ORDER_NOTE]</div>\n			</div>\n			</td>\n		</tr>\n		<tr>\n			<td>\n			<div style=\"border-bottom: 10px solid #f0f0f0;padding: 30px;\">\n			<h3 style=\"margin-top: 0;\"><b>Buyer infomation</b></h3>\n\n			<table width=\"100%\">\n				<tbody>\n					<tr>\n						<td>Buyer name:</td>\n						<td align=\"right\">[BUYER_NAME]</td>\n					</tr>\n					<tr>\n						<td>Phone:</td>\n						<td align=\"right\">[BUYER_PHONE]</td>\n					</tr>\n					<tr>\n						<td>Email:</td>\n						<td align=\"right\">[BUYER_EMAIL]</td>\n					</tr>\n					<tr>\n						<td>Address:</td>\n						<td align=\"right\">[BUYER_ADDRESS]</td>\n					</tr>\n				</tbody>\n			</table>\n			</div>\n			</td>\n		</tr>\n		<tr>\n			<td>\n			<div style=\"border-bottom: 10px solid #f0f0f0;padding: 30px;\">\n			<h3 style=\"margin-top: 0;\"><strong>Receiver&#39;s information</strong></h3>\n\n			<table width=\"100%\">\n				<tbody>\n					<tr>\n						<td>Recipient&#39;s name:</td>\n						<td align=\"right\">[RECEIVER_NAME]</td>\n					</tr>\n					<tr>\n						<td>Phone:</td>\n						<td align=\"right\">[RECEIVER_PHONE]</td>\n					</tr>\n					<tr>\n						<td>Email:</td>\n						<td align=\"right\">[RECEIVER_EMAIL]</td>\n					</tr>\n					<tr>\n						<td>Address:</td>\n						<td align=\"right\">[RECEIVER_ADDRESS]</td>\n					</tr>\n				</tbody>\n			</table>\n			</div>\n			</td>\n		</tr>\n		<tr>\n			<td>\n			<div style=\"border-bottom: 10px solid #f0f0f0;padding: 30px;\">\n			<h3 style=\"margin-top: 0;\"><b>Are you wondering?</b></h3>\n\n			<p>Contact our hotline [COMPANY_HOTLINE] or send an email to the mailbox [COMPANY_EMAIL] (8-9pm both Saturday and Sunday), the [COMPANY_BRANDNAME] team will support you at any time.</p>\n\n			<p>[COMPANY_BRANDNAME] thank you again.</p>\n			</div>\n			</td>\n		</tr>\n	</tbody>\n</table>\n</div>\n</div>\n', 'order_info', 'email', 'en', 1, 'order_email', 2, 1711706375, 1),
 (3, '[ORDER] Email - Thông báo đã xác nhận đơn hàng', 'Đơn hàng #[ORDER_CODE] đã được xác nhận', '<div style=\"color:rgb(32,32,32);font-size:14px;\">\r\n<div style=\"max-width: 750px;margin: auto;border-top: 10px solid #f0f0f0;border-left: 10px solid #f0f0f0;border-right: 10px solid #f0f0f0;\">\r\n<table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" style=\"max-width:750px\" width=\"100%\">\r\n	<tbody>\r\n		<tr>\r\n			<td>\r\n			<div style=\"text-align:center; padding-top: 30px;\">[COMPANY_LOGO]</div>\r\n			</td>\r\n		</tr>\r\n		<tr>\r\n			<td>\r\n			<div style=\"border-bottom: 10px solid #f0f0f0;padding: 30px;\">\r\n			<div style=\"text-align:center;color: #0f146d;padding: 0 15px 30px 15px;font-size: 23px;\">C&aacute;m ơn bạn đ&atilde; đặt h&agrave;ng tại [COMPANY_BRANDNAME]!</div>\r\n\r\n			<h3 style=\"margin-top: 0;\">Xin ch&agrave;o [BUYER_NAME],</h3>\r\n\r\n			<p>[BRAND_NAME] th&ocirc;ng b&aacute;o với bạn rằng: Đơn h&agrave;ng <strong>#[ORDER_CODE]</strong> đ&atilde; được x&aacute;c nhận.</p>\r\n\r\n			<p><b>*Lưu &yacute; nhỏ cho bạn:</b> Bạn chỉ n&ecirc;n nhận h&agrave;ng khi trạng th&aacute;i đơn h&agrave;ng l&agrave; &ldquo;<b>Đang giao h&agrave;ng</b>&rdquo; v&agrave; nhớ kiểm tra M&atilde; đơn h&agrave;ng, Th&ocirc;ng tin người gửi v&agrave; M&atilde; vận đơn để nhận đ&uacute;ng kiện h&agrave;ng nh&eacute;.</p>\r\n			</div>\r\n			</td>\r\n		</tr>\r\n		<tr>\r\n			<td>\r\n			<div style=\"border-bottom: 10px solid #f0f0f0;padding: 30px;\">\r\n			<h3 style=\"margin-top: 0;\"><b>Sản phẩm</b></h3>\r\n			[PRODUCT_LIST]</div>\r\n			</td>\r\n		</tr>\r\n		<tr>\r\n			<td>\r\n			<div style=\"border-bottom: 10px solid #f0f0f0;padding: 30px;\">\r\n			<table cellpadding=\"8\" style=\"margin-bottom: 15px;\" width=\"100%\">\r\n				<tbody>\r\n					<tr>\r\n						<td><b>Tổng số lượng:</b></td>\r\n						<td align=\"center\">&nbsp;</td>\r\n						<td align=\"right\"><b>[TOTAL_QUANTITY]</b></td>\r\n					</tr>\r\n					<tr>\r\n						<td><b>Tổng th&agrave;nh tiền:</b></td>\r\n						<td align=\"center\">VND</td>\r\n						<td align=\"right\"><b>[TOTAL_AMOUNT]</b></td>\r\n					</tr>\r\n					<tr>\r\n						<td><b>Ph&iacute; vận chuyển:</b></td>\r\n						<td align=\"center\">VND</td>\r\n						<td align=\"right\">[DELIVERY_FEE]</td>\r\n					</tr>\r\n					<tr>\r\n						<td><span style=\"color: #f27c24;\"><b>Tổng cộng:</b></span></td>\r\n						<td align=\"center\"><span style=\"color: #f27c24;\"><b>VND</b></span></td>\r\n						<td align=\"right\"><span style=\"color: #f27c24;\"><b>[TOTAL_ORDER]</b></span></td>\r\n					</tr>\r\n				</tbody>\r\n			</table>\r\n\r\n			<div style=\"margin-bottom: 15px;border-bottom:1px solid #f0f0f0;height:0\">&nbsp;</div>\r\n\r\n			<table cellpadding=\"8\" width=\"100%\">\r\n				<tbody>\r\n					<tr>\r\n						<td>Trạng th&aacute;i đơn h&agrave;ng:</td>\r\n						<td align=\"right\">[ORDER_STATUS]</td>\r\n					</tr>\r\n					<tr>\r\n						<td>Phương thức thanh to&aacute;n:</td>\r\n						<td align=\"right\">[ORDER_PAYMENT_METHOD]</td>\r\n					</tr>\r\n					<tr>\r\n						<td>Trạng th&aacute;i thanh to&aacute;n:</td>\r\n						<td align=\"right\">[ORDER_PAYMENT_STATUS]</td>\r\n					</tr>\r\n					<tr>\r\n						<td>T&ugrave;y chọn giao h&agrave;ng:</td>\r\n						<td align=\"right\">[ORDER_DELIVERY_METHOD]</td>\r\n					</tr>\r\n					<tr>\r\n						<td>Trạng th&aacute;i giao h&agrave;ng:</td>\r\n						<td align=\"right\">[ORDER_DELIVERY_STATUS]</td>\r\n					</tr>\r\n				</tbody>\r\n			</table>\r\n			</div>\r\n			</td>\r\n		</tr>\r\n		<tr>\r\n			<td>\r\n			<div style=\"border-bottom: 10px solid #f0f0f0;padding: 30px;\">\r\n			<h3 style=\"margin-top: 0;\"><b>Ng&agrave;y đặt h&agrave;ng:</b> [ORDER_DATE]</h3>\r\n\r\n			<h3 style=\"margin-top: 0;\"><b>Ghi ch&uacute; đơn h&agrave;ng:</b></h3>\r\n\r\n			<div>[ORDER_NOTE]</div>\r\n			</div>\r\n			</td>\r\n		</tr>\r\n		<tr>\r\n			<td>\r\n			<div style=\"border-bottom: 10px solid #f0f0f0;padding: 30px;\">\r\n			<h3 style=\"margin-top: 0;\"><b>Th&ocirc;ng tin người mua</b></h3>\r\n\r\n			<table width=\"100%\">\r\n				<tbody>\r\n					<tr>\r\n						<td>T&ecirc;n người mua:</td>\r\n						<td align=\"right\">[BUYER_NAME]</td>\r\n					</tr>\r\n					<tr>\r\n						<td>Số điện thoại:</td>\r\n						<td align=\"right\">[BUYER_PHONE]</td>\r\n					</tr>\r\n					<tr>\r\n						<td>Email:</td>\r\n						<td align=\"right\">[BUYER_EMAIL]</td>\r\n					</tr>\r\n					<tr>\r\n						<td>Địa chỉ:</td>\r\n						<td align=\"right\">[BUYER_ADDRESS]</td>\r\n					</tr>\r\n				</tbody>\r\n			</table>\r\n			</div>\r\n			</td>\r\n		</tr>\r\n		<tr>\r\n			<td>\r\n			<div style=\"border-bottom: 10px solid #f0f0f0;padding: 30px;\">\r\n			<h3 style=\"margin-top: 0;\"><b>Th&ocirc;ng tin người nhận</b></h3>\r\n\r\n			<table width=\"100%\">\r\n				<tbody>\r\n					<tr>\r\n						<td>T&ecirc;n người nhận:</td>\r\n						<td align=\"right\">[RECEIVER_NAME]</td>\r\n					</tr>\r\n					<tr>\r\n						<td>Số điện thoại:</td>\r\n						<td align=\"right\">[RECEIVER_PHONE]</td>\r\n					</tr>\r\n					<tr>\r\n						<td>Email:</td>\r\n						<td align=\"right\">[RECEIVER_EMAIL]</td>\r\n					</tr>\r\n					<tr>\r\n						<td>Địa chỉ:</td>\r\n						<td align=\"right\">[RECEIVER_ADDRESS]</td>\r\n					</tr>\r\n				</tbody>\r\n			</table>\r\n			</div>\r\n			</td>\r\n		</tr>\r\n		<tr>\r\n			<td>\r\n			<div style=\"border-bottom: 10px solid #f0f0f0;padding: 30px;\">\r\n			<h3 style=\"margin-top: 0;\"><b>C&oacute; phải bạn thắc mắc?</b></h3>\r\n\r\n			<p>Li&ecirc;n hệ hotline [COMPANY_HOTLINE] của ch&uacute;ng t&ocirc;i hoặc gửi email đến h&ograve;m thư [COMPANY_EMAIL] (8-21h both T7, CN), đội ngũ [COMPANY_BRANDNAME] sẽ hỗ trợ bạn bất cứ l&uacute;c n&agrave;o.</p>\r\n\r\n			<p>[COMPANY_BRANDNAME] một lần nữa cảm ơn bạn.</p>\r\n			</div>\r\n			</td>\r\n		</tr>\r\n	</tbody>\r\n</table>\r\n</div>\r\n</div>\r\n', 'order_confirmed', 'email', 'vn', 1, 'order_email', 3, 0, 0),
 (4, '[ORDER] Email - Thông báo đã xác nhận đơn hàng', 'Order #[ORDER_CODE] has been confirmed', '<div style=\"color:rgb(32,32,32);font-size:14px;\">\r\n<div style=\"max-width: 750px;margin: auto;border-top: 10px solid #f0f0f0;border-left: 10px solid #f0f0f0;border-right: 10px solid #f0f0f0;\">\r\n<table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" style=\"max-width:750px\" width=\"100%\">\r\n	<tbody>\r\n		<tr>\r\n			<td>\r\n			<div style=\"text-align:center; padding-top: 30px;\">[COMPANY_LOGO]</div>\r\n			</td>\r\n		</tr>\r\n		<tr>\r\n			<td>\r\n			<div style=\"border-bottom: 10px solid #f0f0f0;padding: 30px;\">\r\n			<div style=\"text-align:center;color: #0f146d;padding: 0 15px 30px 15px;font-size: 23px;\">Thank you for ordering at [COMPANY_BRANDNAME]!</div>\r\n\r\n			<h3 style=\"margin-top: 0;\">Hello [BUYER_NAME],</h3>\r\n\r\n			<p>[BRAND_NAME] informs you that: Order #[ORDER_CODE] has been confirmed.</p>\r\n\r\n			<p>Please only agree to receive the package if the order&rsquo;s status has been updated to &quot;Out for Delivery&quot;. Don&rsquo;t forget to double check your Order number, Sender information and Tracking number to ensure you receive the right package.</p>\r\n			</div>\r\n			</td>\r\n		</tr>\r\n		<tr>\r\n			<td>\r\n			<div style=\"border-bottom: 10px solid #f0f0f0;padding: 30px;\">\r\n			<h3 style=\"margin-top: 0;\"><b>Products</b></h3>\r\n			[PRODUCT_LIST]</div>\r\n			</td>\r\n		</tr>\r\n		<tr>\r\n			<td>\r\n			<div style=\"border-bottom: 10px solid #f0f0f0;padding: 30px;\">\r\n			<table cellpadding=\"8\" style=\"margin-bottom: 15px;\" width=\"100%\">\r\n				<tbody>\r\n					<tr>\r\n						<td><b>Total quantity:</b></td>\r\n						<td align=\"center\">&nbsp;</td>\r\n						<td align=\"right\"><b>[TOTAL_QUANTITY]</b></td>\r\n					</tr>\r\n					<tr>\r\n						<td><b>Total amount:</b></td>\r\n						<td align=\"center\">VND</td>\r\n						<td align=\"right\"><b>[TOTAL_AMOUNT]</b></td>\r\n					</tr>\r\n					<tr>\r\n						<td><b>Delivery fee:</b></td>\r\n						<td align=\"center\">VND</td>\r\n						<td align=\"right\">[DELIVERY_FEE]</td>\r\n					</tr>\r\n					<tr>\r\n						<td><span style=\"color: #f27c24;\"><b>Total:</b></span></td>\r\n						<td align=\"center\"><span style=\"color: #f27c24;\"><b>VND</b></span></td>\r\n						<td align=\"right\"><span style=\"color: #f27c24;\"><b>[TOTAL_ORDER]</b></span></td>\r\n					</tr>\r\n				</tbody>\r\n			</table>\r\n\r\n			<div style=\"margin-bottom: 15px;border-bottom:1px solid #f0f0f0;height:0\">&nbsp;</div>\r\n\r\n			<table cellpadding=\"8\" width=\"100%\">\r\n				<tbody>\r\n					<tr>\r\n						<td>Order status:</td>\r\n						<td align=\"right\">[ORDER_STATUS]</td>\r\n					</tr>\r\n					<tr>\r\n						<td>Payment method:</td>\r\n						<td align=\"right\">[ORDER_PAYMENT_METHOD]</td>\r\n					</tr>\r\n					<tr>\r\n						<td>Payment status:</td>\r\n						<td align=\"right\">[ORDER_PAYMENT_STATUS]</td>\r\n					</tr>\r\n					<tr>\r\n						<td>Delivery method:</td>\r\n						<td align=\"right\">[ORDER_DELIVERY_METHOD]</td>\r\n					</tr>\r\n					<tr>\r\n						<td>Delivery status:</td>\r\n						<td align=\"right\">[ORDER_DELIVERY_STATUS]</td>\r\n					</tr>\r\n				</tbody>\r\n			</table>\r\n			</div>\r\n			</td>\r\n		</tr>\r\n		<tr>\r\n			<td>\r\n			<div style=\"border-bottom: 10px solid #f0f0f0;padding: 30px;\">\r\n			<h3 style=\"margin-top: 0;\"><b>Order date:</b> [ORDER_DATE]</h3>\r\n\r\n			<h3 style=\"margin-top: 0;\"><b>Order notes:</b></h3>\r\n\r\n			<div>[ORDER_NOTE]</div>\r\n			</div>\r\n			</td>\r\n		</tr>\r\n		<tr>\r\n			<td>\r\n			<div style=\"border-bottom: 10px solid #f0f0f0;padding: 30px;\">\r\n			<h3 style=\"margin-top: 0;\"><b>Buyer infomation</b></h3>\r\n\r\n			<table width=\"100%\">\r\n				<tbody>\r\n					<tr>\r\n						<td>Buyer name:</td>\r\n						<td align=\"right\">[BUYER_NAME]</td>\r\n					</tr>\r\n					<tr>\r\n						<td>Phone:</td>\r\n						<td align=\"right\">[BUYER_PHONE]</td>\r\n					</tr>\r\n					<tr>\r\n						<td>Email:</td>\r\n						<td align=\"right\">[BUYER_EMAIL]</td>\r\n					</tr>\r\n					<tr>\r\n						<td>Address:</td>\r\n						<td align=\"right\">[BUYER_ADDRESS]</td>\r\n					</tr>\r\n				</tbody>\r\n			</table>\r\n			</div>\r\n			</td>\r\n		</tr>\r\n		<tr>\r\n			<td>\r\n			<div style=\"border-bottom: 10px solid #f0f0f0;padding: 30px;\">\r\n			<h3 style=\"margin-top: 0;\"><strong>Receiver&#39;s information</strong></h3>\r\n\r\n			<table width=\"100%\">\r\n				<tbody>\r\n					<tr>\r\n						<td>Recipient&#39;s name:</td>\r\n						<td align=\"right\">[RECEIVER_NAME]</td>\r\n					</tr>\r\n					<tr>\r\n						<td>Phone:</td>\r\n						<td align=\"right\">[RECEIVER_PHONE]</td>\r\n					</tr>\r\n					<tr>\r\n						<td>Email:</td>\r\n						<td align=\"right\">[RECEIVER_EMAIL]</td>\r\n					</tr>\r\n					<tr>\r\n						<td>Address:</td>\r\n						<td align=\"right\">[RECEIVER_ADDRESS]</td>\r\n					</tr>\r\n				</tbody>\r\n			</table>\r\n			</div>\r\n			</td>\r\n		</tr>\r\n		<tr>\r\n			<td>\r\n			<div style=\"border-bottom: 10px solid #f0f0f0;padding: 30px;\">\r\n			<h3 style=\"margin-top: 0;\"><b>Are you wondering?</b></h3>\r\n\r\n			<p>Contact our hotline [COMPANY_HOTLINE] or send an email to the mailbox [COMPANY_EMAIL] (8-9pm both Saturday and Sunday), the [COMPANY_BRANDNAME] team will support you at any time.</p>\r\n\r\n			<p>[COMPANY_BRANDNAME] thank you again.</p>\r\n			</div>\r\n			</td>\r\n		</tr>\r\n	</tbody>\r\n</table>\r\n</div>\r\n</div>\r\n', 'order_confirmed', 'email', 'en', 1, 'order_email', 4, 0, 0),
@@ -865,11 +745,7 @@ CREATE TABLE `tblunit` (
 --
 
 INSERT INTO `tblunit` (`ID`, `title_vn`, `title_en`, `t_status`, `t_index`, `created_date`, `created_by`, `updated_date`, `updated_by`, `lang`) VALUES
-(1, 'Gói', 'Package', 1, 1, 1706000694, 'admin', 1711341316, '1', 'vn'),
-(4, 'Lít', 'Liter', 1, 2, 1706001817, 'admin', 1706001817, 'admin', 'vn'),
-(5, 'Kg', 'Kg', 1, 3, 1706001823, 'admin', 1706001823, 'admin', 'vn'),
-(6, 'Hộp', 'Box', 1, 4, 1711341330, '1', 1711341330, '1', 'vn'),
-(7, 'Chai', 'Bottle', 1, 5, 1711342251, '1', 1711342251, '1', 'vn');
+(1, 'Gói', 'Package', 1, 1, 1731590976, '1', 1731590976, '1', 'vn');
 
 -- --------------------------------------------------------
 
@@ -903,7 +779,7 @@ CREATE TABLE `tblwebmaster` (
 
 INSERT INTO `tblwebmaster` (`ID`, `username`, `password`, `fullname`, `phone`, `email`, `address`, `level`, `t_status`, `module_access`, `permit_access`, `salt`, `avatar`, `created_date`, `created_by`, `updated_date`, `updated_by`) VALUES
 (1, 'admin', '194685ae20e13ebf9c234492c7939635', 'Snower', '', 'minhnhat@redsun.vn', '', 'root', 1, 'ALL', 'F', 'krmP', '', 1681465013, 1, 1681723082, 1),
-(2, 'minhnhat', 'c2bf6cbc8f0f2862823c9c41d566d16c', 'Redsun Support', '02873015630 (ext: 5)', 'nhungho@redsun.vn', '', 'admin', 1, 'ALL', 'F', 'UxMH', '', 1681465013, 1, 1689214219, 1);
+(2, 'minhnhat', 'c2bf6cbc8f0f2862823c9c41d566d16c', 'Redsun Support', '02873015630 (ext: 5)', 'nhungho@redsun.vn', '', 'admin', 1, 'ALL', 'F', 'UxMH', '', 1681465013, 1, 1731590218, 1);
 
 -- --------------------------------------------------------
 
@@ -942,7 +818,7 @@ CREATE TABLE `tblwidget` (
 --
 
 INSERT INTO `tblwidget` (`ID`, `module_code`, `w_code`, `w_type`, `w_name`, `w_max_item`, `w_filter_sql`, `title`, `position`, `intro`, `content`, `imgURL`, `imgURL_bg`, `link_1`, `link_2`, `item_id`, `t_status`, `t_index`, `lang`, `created_date`, `created_by`, `updated_date`, `updated_by`) VALUES
-(1, 'RSCMS', '_NEWS', 'object', '[VN] - Tin tức nè', 5, 'and type_art=&#039;news&#039;', 'Tin mới nhất', 'Trang chủ', 'Tin tức trong ngày', '&amp;lt;p&amp;gt;Nội dung chưa có &amp;lt;span style=&amp;quot;color:red;&amp;quot;&amp;gt;&amp;lt;strong&amp;gt;CKEditor&amp;lt;/strong&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;/p&amp;gt;', 'resources/upload/widget/1/banner-1.jpg', 'resources/upload/widget/1/bg/banner-2.jpg', 'http://localhost/tuyetshop.net/html', 'http://localhost/tuyetshop.net/web', '5@6@7@4', 1, 0, 'vn', 1721812524, 1, 1721901868, 1),
+(1, 'RSCMS', '_NEWS', 'object', '[VN] - Tin tức nè', 5, 'and type_art=&#039;news&#039;', 'Tin mới nhất', 'Trang chủ', 'Tin tức trong ngày', '&amp;lt;p&amp;gt;Nội dung chưa có &amp;lt;span style=&amp;quot;color:red;&amp;quot;&amp;gt;&amp;lt;strong&amp;gt;CKEditor&amp;lt;/strong&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;/p&amp;gt;', '', '', 'http://localhost/tuyetshop.net/html', 'http://localhost/tuyetshop.net/web', '', 1, 0, 'vn', 1721812524, 1, 1731591271, 1),
 (2, 'RSCMS', '_CATES', 'category', 'Danh mục', 3, '', '', 'menu trái', '', '', '', '', '', '', '', 1, 2, 'vn', 1721901894, 1, 1721901906, 1);
 
 --
@@ -1025,6 +901,12 @@ ALTER TABLE `tbldeliverymethod`
 -- Indexes for table `tbllibrary`
 --
 ALTER TABLE `tbllibrary`
+  ADD PRIMARY KEY (`ID`);
+
+--
+-- Indexes for table `tblmember`
+--
+ALTER TABLE `tblmember`
   ADD PRIMARY KEY (`ID`);
 
 --
@@ -1149,7 +1031,7 @@ ALTER TABLE `tblbrand`
 -- AUTO_INCREMENT for table `tblcategory`
 --
 ALTER TABLE `tblcategory`
-  MODIFY `ID` int(9) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+  MODIFY `ID` int(9) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=30;
 
 --
 -- AUTO_INCREMENT for table `tblcolor`
@@ -1192,6 +1074,12 @@ ALTER TABLE `tbldeliverymethod`
 --
 ALTER TABLE `tbllibrary`
   MODIFY `ID` int(9) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+
+--
+-- AUTO_INCREMENT for table `tblmember`
+--
+ALTER TABLE `tblmember`
+  MODIFY `ID` int(9) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `tblorder`
@@ -1245,7 +1133,7 @@ ALTER TABLE `tblproduct_price`
 -- AUTO_INCREMENT for table `tblseo`
 --
 ALTER TABLE `tblseo`
-  MODIFY `ID` int(9) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=28;
+  MODIFY `ID` int(9) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=35;
 
 --
 -- AUTO_INCREMENT for table `tblsize`
