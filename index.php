@@ -41,22 +41,24 @@
 
     file_exists(_PATH_DB_LOCAL_CLASS)?include_once(_PATH_DB_LOCAL_CLASS):die(_PATH_DB_LOCAL_CLASS.' khong ton tai');
     file_exists(_PATH_METHOD_CLASS)?include_once(_PATH_METHOD_CLASS):die(_PATH_METHOD_CLASS.' khong ton tai');
-    
-    /* khai bao bien toan cuc */
-    // $Session = new Session();
-    $method = new method();
-    
 
-    /* get data - layout */
+    file_exists('config/define_frontend.php')?include_once('config/define_frontend.php'):die('config/define_frontend.php khong ton tai');
 
+    file_exists(_PHISICAL_PATH_CONTROLLER_RENDER)?include_once(_PHISICAL_PATH_CONTROLLER_RENDER):die(_PHISICAL_PATH_CONTROLLER_RENDER.' khong ton tai');
 ?>
+
 <!DOCTYPE html>
 <html>
 <head>
-
+    <?php 
+        $_renderHead_Controller = new Render_Controller(_PHISICAL_PATH_VIEW_LAYOUT.'head.php');
+        $_renderHead_Controller->renderTemplate();
+    ?>
 </head>
 <body>
-    controler -> data -> layout -> script
+    <?php 
+        $_renderScript_Controller = new Render_Controller(_PHISICAL_PATH_VIEW_LAYOUT.'script.php');
+        $_renderScript_Controller->renderTemplate();
+    ?>
 </body>
-
 </html>

@@ -18,21 +18,21 @@
 	file_exists($_LEVEL.'config/define_widget.php')?include_once($_LEVEL.'config/define_widget.php'):die($_LEVEL.'config/define_widget.php khong ton tai');
 
 	/* path file controller */
-	define("_PHISICAL_PATH_CONTROLLER",_PHISICAL_PATH_ROOT.'controller/');
+	// define("_PHISICAL_PATH_CONTROLLER",_PHISICAL_PATH_ROOT.'controller/');
 
 	/* path file ajax */
-	define("_PHISICAL_PATH_AJAX",_PHISICAL_PATH_ROOT.'ajax.php');
+	// define("_PHISICAL_PATH_AJAX",_PHISICAL_PATH_ROOT.'ajax.php');
+
+	/* url file ajax */
+	// define("_ROOT_PATH_AJAX",_PHISICAL_PATH_ROOT.'ajax.php');
 
 	/* path file classes */
 	define("_PHISICAL_PATH_CLASSES",_PHISICAL_PATH_ROOT.'classes/');
 
 	/* path file custom */
-	define("_PHISICAL_PATH_VIEW",_PHISICAL_PATH_ROOT.'view/'.$GLOBALS['WEBCONFIG']['VIEW'].'/');
-	define("_PHISICAL_PATH_VIEW_LAYOUT",_PHISICAL_PATH_VIEW.'layout/');
-	define("_PHISICAL_PATH_VIEW_DATA",_PHISICAL_PATH_VIEW.'data/');
-	define("_PHISICAL_PATH_VIEW_SCRIPT",_PHISICAL_PATH_VIEW.'script/');
-
-	/* url file ajax */
-	define("_ROOT_PATH_AJAX",_PHISICAL_PATH_ROOT.'ajax.php');
+	// define("_PHISICAL_PATH_VIEW",_PHISICAL_PATH_ROOT.'view/'.$GLOBALS['WEBCONFIG']['VIEW'].'/');
+	// define("_PHISICAL_PATH_VIEW_LAYOUT",_PHISICAL_PATH_VIEW.'layout/');
+	// define("_PHISICAL_PATH_VIEW_DATA",_PHISICAL_PATH_VIEW.'data/');
+	// define("_PHISICAL_PATH_VIEW_SCRIPT",_PHISICAL_PATH_VIEW.'script/');
 
 ?>

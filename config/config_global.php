@@ -1,5 +1,9 @@
 <?php
 
+	ini_set('display_errors', '1');
+	error_reporting(E_ALL);
+	date_default_timezone_set('Asia/Ho_Chi_Minh');
+
 	/* lang array */
 	define("_LANG_ARR",serialize($WEBCONFIG['LANG_ARR']));
 	/* Mod ReWRITE */
